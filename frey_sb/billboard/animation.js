@@ -80,8 +80,8 @@ lib.properties = {
 	color: "#000000",
 	opacity: 1.00,
 	manifest: [
-		{src:"images/film.png", id:"film"},
-		{src:"images/frey_arsenal.png", id:"frey_arsenal"}
+		{src:"images/film.png?1538558996148", id:"film"},
+		{src:"images/frey_arsenal.png?1538558996148", id:"frey_arsenal"}
 	],
 	preloads: []
 };
