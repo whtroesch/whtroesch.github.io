@@ -45,6 +45,12 @@ p.nominalBounds = new cjs.Rectangle(0,0,366,136);
 p.nominalBounds = new cjs.Rectangle(0,0,135,59);
 
 
+(lib.raeder = function() {
+	this.initialize(img.raeder);
+}).prototype = p = new cjs.Bitmap();
+p.nominalBounds = new cjs.Rectangle(0,0,400,48);
+
+
 (lib.schein = function() {
 	this.initialize(img.schein);
 }).prototype = p = new cjs.Bitmap();
@@ -71,6 +77,19 @@ function getMCSymbolPrototype(symbol, nominalBounds, frameBounds) {
 	prototype.frameBounds = frameBounds;
 	return prototype;
 	}
+
+
+(lib.Symbol7 = function(mode,startPosition,loop) {
+	this.initialize(mode,startPosition,loop,{});
+
+	// Ebene_1
+	this.instance = new lib.raeder();
+	this.instance.parent = this;
+	this.instance.setTransform(0,0,0.39,0.389);
+
+	this.timeline.addTween(cjs.Tween.get(this.instance).wait(1));
+
+}).prototype = getMCSymbolPrototype(lib.Symbol7, new cjs.Rectangle(0,0,156,18.7), null);
 
 
 (lib.Symbol6 = function(mode,startPosition,loop) {
@@ -173,67 +192,76 @@ p.nominalBounds = new cjs.Rectangle(-125,-22,250,44);
 (lib.animation = function(mode,startPosition,loop) {
 if (loop == null) { loop = false; }	this.initialize(mode,startPosition,loop,{});
 
-	// text
-	this.instance = new lib.Symbol5();
+	// raeder
+	this.instance = new lib.Symbol7();
 	this.instance.parent = this;
-	this.instance.setTransform(155.4,46,1,1,0,0,0,136.4,25);
+	this.instance.setTransform(130.7,81.4,1.064,1.062,0,0,0,78.1,9.3);
 	this.instance.alpha = 0;
 	this.instance._off = true;
 
-	this.timeline.addTween(cjs.Tween.get(this.instance).wait(72).to({_off:false},0).wait(1).to({alpha:0.05},0).wait(1).to({alpha:0.1},0).wait(1).to({alpha:0.15},0).wait(1).to({alpha:0.2},0).wait(1).to({alpha:0.25},0).wait(1).to({alpha:0.3},0).wait(1).to({alpha:0.35},0).wait(1).to({alpha:0.4},0).wait(1).to({alpha:0.45},0).wait(1).to({alpha:0.5},0).wait(1).to({alpha:0.55},0).wait(1).to({alpha:0.6},0).wait(1).to({alpha:0.65},0).wait(1).to({alpha:0.7},0).wait(1).to({alpha:0.75},0).wait(1).to({alpha:0.8},0).wait(1).to({alpha:0.85},0).wait(1).to({alpha:0.9},0).wait(1).to({alpha:0.95},0).wait(1).to({alpha:1},0).wait(54));
+	this.timeline.addTween(cjs.Tween.get(this.instance).wait(77).to({_off:false},0).wait(1).to({regX:78,x:130.6,alpha:0.05},0).wait(1).to({scaleY:1.06,alpha:0.1},0).wait(1).to({alpha:0.15},0).wait(1).to({alpha:0.2},0).wait(1).to({alpha:0.25},0).wait(1).to({alpha:0.3},0).wait(1).to({alpha:0.35},0).wait(1).to({alpha:0.4},0).wait(1).to({scaleY:1.06,alpha:0.45},0).wait(1).to({alpha:0.5},0).wait(1).to({alpha:0.55},0).wait(1).to({alpha:0.6},0).wait(1).to({alpha:0.65},0).wait(1).to({alpha:0.7},0).wait(1).to({alpha:0.75},0).wait(1).to({alpha:0.8},0).wait(1).to({scaleY:1.06,alpha:0.85},0).wait(1).to({alpha:0.9},0).wait(1).to({alpha:0.95},0).wait(1).to({alpha:1},0).wait(5).to({scaleY:1.06},0).wait(9).to({scaleY:1.06},0).wait(8).to({scaleY:1.06},0).wait(3).to({y:81.3},0).wait(6).to({scaleY:1.06},0).wait(9).to({scaleY:1.05},0).wait(9));
 
-	// button
-	this.instance_1 = new lib.button_1();
+	// text
+	this.instance_1 = new lib.Symbol5();
 	this.instance_1.parent = this;
-	this.instance_1.setTransform(150.5,222.6,0.634,0.634);
+	this.instance_1.setTransform(151.2,38.4,1.139,1.139,0,0,0,136.3,25);
 	this.instance_1.alpha = 0;
 	this.instance_1._off = true;
-	new cjs.ButtonHelper(this.instance_1, 0, 1, 2, false, new lib.button_1(), 3);
 
-	this.timeline.addTween(cjs.Tween.get(this.instance_1).wait(88).to({_off:false},0).wait(1).to({alpha:0.063},0).wait(1).to({alpha:0.125},0).wait(1).to({alpha:0.188},0).wait(1).to({alpha:0.25},0).wait(1).to({alpha:0.313},0).wait(1).to({alpha:0.375},0).wait(1).to({alpha:0.438},0).wait(1).to({alpha:0.5},0).wait(1).to({alpha:0.563},0).wait(1).to({alpha:0.625},0).wait(1).to({alpha:0.688},0).wait(1).to({alpha:0.75},0).wait(1).to({alpha:0.813},0).wait(1).to({alpha:0.875},0).wait(1).to({alpha:0.938},0).wait(1).to({alpha:1},0).wait(42));
+	this.timeline.addTween(cjs.Tween.get(this.instance_1).wait(72).to({_off:false},0).wait(1).to({regX:136.4,x:151.3,y:38.3,alpha:0.05},0).wait(1).to({alpha:0.1},0).wait(1).to({alpha:0.15},0).wait(1).to({alpha:0.2},0).wait(1).to({alpha:0.25},0).wait(1).to({alpha:0.3},0).wait(1).to({alpha:0.35},0).wait(1).to({alpha:0.4},0).wait(1).to({alpha:0.45},0).wait(1).to({alpha:0.5},0).wait(1).to({alpha:0.55},0).wait(1).to({alpha:0.6},0).wait(1).to({alpha:0.65},0).wait(1).to({alpha:0.7},0).wait(1).to({alpha:0.75},0).wait(1).to({alpha:0.8},0).wait(1).to({alpha:0.85},0).wait(1).to({scaleY:1.14,alpha:0.9},0).wait(1).to({alpha:0.95},0).wait(1).to({alpha:1},0).wait(1).to({scaleY:1.14},0).wait(2).to({x:151.2},0).wait(1).to({y:38.4},0).wait(49).to({x:151.1},0).wait(1));
 
-	// car
-	this.instance_2 = new lib.Symbol2();
+	// button
+	this.instance_2 = new lib.button_1();
 	this.instance_2.parent = this;
-	this.instance_2.setTransform(154,161.5,1,1,0,0,0,87,62.5);
+	this.instance_2.setTransform(150.5,222.6,0.634,0.634);
 	this.instance_2.alpha = 0;
 	this.instance_2._off = true;
+	new cjs.ButtonHelper(this.instance_2, 0, 1, 2, false, new lib.button_1(), 3);
 
-	this.timeline.addTween(cjs.Tween.get(this.instance_2).wait(5).to({_off:false},0).wait(1).to({regX:87.1,x:154.1,alpha:0.033},0).wait(1).to({alpha:0.067},0).wait(1).to({alpha:0.1},0).wait(1).to({alpha:0.133},0).wait(1).to({alpha:0.167},0).wait(1).to({alpha:0.2},0).wait(1).to({alpha:0.233},0).wait(1).to({alpha:0.267},0).wait(1).to({alpha:0.3},0).wait(1).to({alpha:0.333},0).wait(1).to({alpha:0.367},0).wait(1).to({alpha:0.4},0).wait(1).to({alpha:0.433},0).wait(1).to({alpha:0.467},0).wait(1).to({alpha:0.5},0).wait(1).to({alpha:0.533},0).wait(1).to({alpha:0.567},0).wait(1).to({alpha:0.6},0).wait(1).to({alpha:0.633},0).wait(1).to({alpha:0.667},0).wait(1).to({alpha:0.7},0).wait(1).to({alpha:0.733},0).wait(1).to({alpha:0.767},0).wait(1).to({alpha:0.8},0).wait(1).to({alpha:0.833},0).wait(1).to({alpha:0.867},0).wait(1).to({alpha:0.9},0).wait(1).to({alpha:0.933},0).wait(1).to({alpha:0.967},0).wait(1).to({alpha:1},0).wait(111));
+	this.timeline.addTween(cjs.Tween.get(this.instance_2).wait(88).to({_off:false},0).wait(1).to({alpha:0.063},0).wait(1).to({alpha:0.125},0).wait(1).to({alpha:0.188},0).wait(1).to({alpha:0.25},0).wait(1).to({alpha:0.313},0).wait(1).to({alpha:0.375},0).wait(1).to({alpha:0.438},0).wait(1).to({alpha:0.5},0).wait(1).to({alpha:0.563},0).wait(1).to({alpha:0.625},0).wait(1).to({alpha:0.688},0).wait(1).to({alpha:0.75},0).wait(1).to({alpha:0.813},0).wait(1).to({alpha:0.875},0).wait(1).to({alpha:0.938},0).wait(1).to({alpha:1},0).wait(42));
 
-	// filmr
-	this.instance_3 = new lib.Symbol4();
+	// car
+	this.instance_3 = new lib.Symbol2();
 	this.instance_3.parent = this;
-	this.instance_3.setTransform(222.5,109.6,1,1,0,0,0,79.5,29.6);
+	this.instance_3.setTransform(154,169.1,1,1,0,0,0,87,62.5);
 	this.instance_3.alpha = 0;
 	this.instance_3._off = true;
 
-	this.timeline.addTween(cjs.Tween.get(this.instance_3).wait(35).to({_off:false},0).wait(1).to({regY:29.5,y:109.5,alpha:0.019},0).wait(1).to({alpha:0.039},0).wait(1).to({alpha:0.058},0).wait(1).to({alpha:0.078},0).wait(1).to({alpha:0.097},0).wait(1).to({alpha:0.116},0).wait(1).to({alpha:0.136},0).wait(1).to({alpha:0.155},0).wait(1).to({alpha:0.175},0).wait(1).to({alpha:0.194},0).wait(1).to({alpha:0.214},0).wait(1).to({alpha:0.233},0).wait(1).to({alpha:0.252},0).wait(1).to({alpha:0.272},0).wait(1).to({alpha:0.291},0).wait(1).to({alpha:0.311},0).wait(1).to({alpha:0.33},0).wait(1).to({alpha:0.352},0).wait(1).to({alpha:0.373},0).wait(1).to({alpha:0.394},0).wait(1).to({alpha:0.416},0).wait(1).to({alpha:0.438},0).wait(1).to({alpha:0.459},0).wait(1).to({alpha:0.481},0).wait(1).to({alpha:0.502},0).wait(1).to({alpha:0.524},0).wait(1).to({alpha:0.545},0).wait(1).to({alpha:0.567},0).wait(1).to({alpha:0.588},0).wait(1).to({alpha:0.609},0).wait(1).to({alpha:0.631},0).wait(1).to({alpha:0.652},0).wait(1).to({alpha:0.674},0).wait(1).to({alpha:0.696},0).wait(1).to({alpha:0.717},0).wait(1).to({alpha:0.739},0).wait(1).to({alpha:0.76},0).wait(1).to({x:223.2,alpha:0.772},0).wait(1).to({x:223.9,alpha:0.784},0).wait(1).to({x:224.7,alpha:0.796},0).wait(1).to({x:225.4,alpha:0.808},0).wait(1).to({x:226.1,alpha:0.82},0).wait(1).to({x:226.8,alpha:0.832},0).wait(1).to({x:227.5,alpha:0.844},0).wait(1).to({x:228.3,alpha:0.856},0).wait(1).to({x:229,alpha:0.868},0).wait(1).to({x:229.7,alpha:0.88},0).wait(1).to({x:230.4,alpha:0.892},0).wait(1).to({x:231.1,alpha:0.904},0).wait(1).to({x:231.9,alpha:0.916},0).wait(1).to({x:232.6,alpha:0.928},0).wait(1).to({x:233.3,alpha:0.94},0).wait(1).to({x:234,alpha:0.952},0).wait(1).to({x:234.7,alpha:0.964},0).wait(1).to({x:235.5,alpha:0.976},0).wait(1).to({x:236.2,alpha:0.988},0).wait(1).to({x:236.9,alpha:1},0).wait(54));
+	this.timeline.addTween(cjs.Tween.get(this.instance_3).wait(5).to({_off:false},0).wait(1).to({regX:87.1,x:154.1,alpha:0.033},0).wait(1).to({alpha:0.067},0).wait(1).to({alpha:0.1},0).wait(1).to({alpha:0.133},0).wait(1).to({alpha:0.167},0).wait(1).to({alpha:0.2},0).wait(1).to({alpha:0.233},0).wait(1).to({alpha:0.267},0).wait(1).to({alpha:0.3},0).wait(1).to({alpha:0.333},0).wait(1).to({alpha:0.367},0).wait(1).to({alpha:0.4},0).wait(1).to({alpha:0.433},0).wait(1).to({alpha:0.467},0).wait(1).to({alpha:0.5},0).wait(1).to({alpha:0.533},0).wait(1).to({alpha:0.567},0).wait(1).to({alpha:0.6},0).wait(1).to({alpha:0.633},0).wait(1).to({alpha:0.667},0).wait(1).to({alpha:0.7},0).wait(1).to({alpha:0.733},0).wait(1).to({alpha:0.767},0).wait(1).to({alpha:0.8},0).wait(1).to({alpha:0.833},0).wait(1).to({alpha:0.867},0).wait(1).to({alpha:0.9},0).wait(1).to({alpha:0.933},0).wait(1).to({alpha:0.967},0).wait(1).to({alpha:1},0).wait(111));
 
-	// filml
-	this.instance_4 = new lib.Symbol3();
+	// filmr
+	this.instance_4 = new lib.Symbol4();
 	this.instance_4.parent = this;
-	this.instance_4.setTransform(29.8,137.6,1,1,0,0,0,44.8,21.6);
+	this.instance_4.setTransform(222.5,117.2,1,1,0,0,0,79.5,29.6);
 	this.instance_4.alpha = 0;
 	this.instance_4._off = true;
 
-	this.timeline.addTween(cjs.Tween.get(this.instance_4).wait(35).to({_off:false},0).wait(1).to({alpha:0.019},0).wait(1).to({alpha:0.039},0).wait(1).to({alpha:0.058},0).wait(1).to({alpha:0.078},0).wait(1).to({alpha:0.097},0).wait(1).to({alpha:0.116},0).wait(1).to({alpha:0.136},0).wait(1).to({alpha:0.155},0).wait(1).to({alpha:0.175},0).wait(1).to({alpha:0.194},0).wait(1).to({alpha:0.214},0).wait(1).to({alpha:0.233},0).wait(1).to({alpha:0.252},0).wait(1).to({alpha:0.272},0).wait(1).to({alpha:0.291},0).wait(1).to({alpha:0.311},0).wait(1).to({alpha:0.33},0).wait(1).to({alpha:0.352},0).wait(1).to({alpha:0.373},0).wait(1).to({alpha:0.394},0).wait(1).to({alpha:0.416},0).wait(1).to({alpha:0.438},0).wait(1).to({alpha:0.459},0).wait(1).to({alpha:0.481},0).wait(1).to({alpha:0.502},0).wait(1).to({alpha:0.524},0).wait(1).to({alpha:0.545},0).wait(1).to({alpha:0.567},0).wait(1).to({alpha:0.588},0).wait(1).to({alpha:0.609},0).wait(1).to({alpha:0.631},0).wait(1).to({alpha:0.652},0).wait(1).to({alpha:0.674},0).wait(1).to({alpha:0.696},0).wait(1).to({alpha:0.717},0).wait(1).to({alpha:0.739},0).wait(1).to({alpha:0.76},0).wait(1).to({x:30.6,alpha:0.772},0).wait(1).to({x:31.4,alpha:0.784},0).wait(1).to({x:32.1,alpha:0.796},0).wait(1).to({x:32.9,alpha:0.808},0).wait(1).to({x:33.6,alpha:0.82},0).wait(1).to({x:34.4,alpha:0.832},0).wait(1).to({x:35.2,alpha:0.844},0).wait(1).to({x:35.9,alpha:0.856},0).wait(1).to({x:36.7,alpha:0.868},0).wait(1).to({x:37.4,alpha:0.88},0).wait(1).to({x:38.2,alpha:0.892},0).wait(1).to({x:39,alpha:0.904},0).wait(1).to({x:39.7,alpha:0.916},0).wait(1).to({x:40.5,alpha:0.928},0).wait(1).to({x:41.2,alpha:0.94},0).wait(1).to({x:42,alpha:0.952},0).wait(1).to({x:42.8,alpha:0.964},0).wait(1).to({x:43.5,alpha:0.976},0).wait(1).to({x:44.3,alpha:0.988},0).wait(1).to({x:45,alpha:1},0).wait(54));
+	this.timeline.addTween(cjs.Tween.get(this.instance_4).wait(35).to({_off:false},0).wait(1).to({regY:29.5,y:117.1,alpha:0.019},0).wait(1).to({alpha:0.039},0).wait(1).to({alpha:0.058},0).wait(1).to({alpha:0.078},0).wait(1).to({alpha:0.097},0).wait(1).to({alpha:0.116},0).wait(1).to({alpha:0.136},0).wait(1).to({alpha:0.155},0).wait(1).to({alpha:0.175},0).wait(1).to({alpha:0.194},0).wait(1).to({alpha:0.214},0).wait(1).to({alpha:0.233},0).wait(1).to({alpha:0.252},0).wait(1).to({alpha:0.272},0).wait(1).to({alpha:0.291},0).wait(1).to({alpha:0.311},0).wait(1).to({alpha:0.33},0).wait(1).to({alpha:0.352},0).wait(1).to({alpha:0.373},0).wait(1).to({alpha:0.394},0).wait(1).to({alpha:0.416},0).wait(1).to({alpha:0.438},0).wait(1).to({alpha:0.459},0).wait(1).to({alpha:0.481},0).wait(1).to({alpha:0.502},0).wait(1).to({alpha:0.524},0).wait(1).to({alpha:0.545},0).wait(1).to({alpha:0.567},0).wait(1).to({alpha:0.588},0).wait(1).to({alpha:0.609},0).wait(1).to({alpha:0.631},0).wait(1).to({alpha:0.652},0).wait(1).to({alpha:0.674},0).wait(1).to({alpha:0.696},0).wait(1).to({alpha:0.717},0).wait(1).to({alpha:0.739},0).wait(1).to({alpha:0.76},0).wait(1).to({x:223.2,alpha:0.772},0).wait(1).to({x:223.9,alpha:0.784},0).wait(1).to({x:224.7,alpha:0.796},0).wait(1).to({x:225.4,alpha:0.808},0).wait(1).to({x:226.1,alpha:0.82},0).wait(1).to({x:226.8,alpha:0.832},0).wait(1).to({x:227.5,alpha:0.844},0).wait(1).to({x:228.3,alpha:0.856},0).wait(1).to({x:229,alpha:0.868},0).wait(1).to({x:229.7,alpha:0.88},0).wait(1).to({x:230.4,alpha:0.892},0).wait(1).to({x:231.1,alpha:0.904},0).wait(1).to({x:231.9,alpha:0.916},0).wait(1).to({x:232.6,alpha:0.928},0).wait(1).to({x:233.3,alpha:0.94},0).wait(1).to({x:234,alpha:0.952},0).wait(1).to({x:234.7,alpha:0.964},0).wait(1).to({x:235.5,alpha:0.976},0).wait(1).to({x:236.2,alpha:0.988},0).wait(1).to({x:236.9,alpha:1},0).wait(54));
+
+	// filml
+	this.instance_5 = new lib.Symbol3();
+	this.instance_5.parent = this;
+	this.instance_5.setTransform(29.8,145.2,1,1,0,0,0,44.8,21.6);
+	this.instance_5.alpha = 0;
+	this.instance_5._off = true;
+
+	this.timeline.addTween(cjs.Tween.get(this.instance_5).wait(35).to({_off:false},0).wait(1).to({alpha:0.019},0).wait(1).to({alpha:0.039},0).wait(1).to({alpha:0.058},0).wait(1).to({alpha:0.078},0).wait(1).to({alpha:0.097},0).wait(1).to({alpha:0.116},0).wait(1).to({alpha:0.136},0).wait(1).to({alpha:0.155},0).wait(1).to({alpha:0.175},0).wait(1).to({alpha:0.194},0).wait(1).to({alpha:0.214},0).wait(1).to({alpha:0.233},0).wait(1).to({alpha:0.252},0).wait(1).to({alpha:0.272},0).wait(1).to({alpha:0.291},0).wait(1).to({alpha:0.311},0).wait(1).to({alpha:0.33},0).wait(1).to({alpha:0.352},0).wait(1).to({alpha:0.373},0).wait(1).to({alpha:0.394},0).wait(1).to({alpha:0.416},0).wait(1).to({alpha:0.438},0).wait(1).to({alpha:0.459},0).wait(1).to({alpha:0.481},0).wait(1).to({alpha:0.502},0).wait(1).to({alpha:0.524},0).wait(1).to({alpha:0.545},0).wait(1).to({alpha:0.567},0).wait(1).to({alpha:0.588},0).wait(1).to({alpha:0.609},0).wait(1).to({alpha:0.631},0).wait(1).to({alpha:0.652},0).wait(1).to({alpha:0.674},0).wait(1).to({alpha:0.696},0).wait(1).to({alpha:0.717},0).wait(1).to({alpha:0.739},0).wait(1).to({alpha:0.76},0).wait(1).to({x:30.6,alpha:0.772},0).wait(1).to({x:31.4,alpha:0.784},0).wait(1).to({x:32.1,alpha:0.796},0).wait(1).to({x:32.9,alpha:0.808},0).wait(1).to({x:33.6,alpha:0.82},0).wait(1).to({x:34.4,alpha:0.832},0).wait(1).to({x:35.2,alpha:0.844},0).wait(1).to({x:35.9,alpha:0.856},0).wait(1).to({x:36.7,alpha:0.868},0).wait(1).to({x:37.4,alpha:0.88},0).wait(1).to({x:38.2,alpha:0.892},0).wait(1).to({x:39,alpha:0.904},0).wait(1).to({x:39.7,alpha:0.916},0).wait(1).to({x:40.5,alpha:0.928},0).wait(1).to({x:41.2,alpha:0.94},0).wait(1).to({x:42,alpha:0.952},0).wait(1).to({x:42.8,alpha:0.964},0).wait(1).to({x:43.5,alpha:0.976},0).wait(1).to({x:44.3,alpha:0.988},0).wait(1).to({x:45,alpha:1},0).wait(54));
 
 	// logo
-	this.instance_5 = new lib.Symbol6();
-	this.instance_5.parent = this;
-	this.instance_5.setTransform(150.1,42.4,1,1,0,0,0,58.1,25.4);
+	this.instance_6 = new lib.Symbol6();
+	this.instance_6.parent = this;
+	this.instance_6.setTransform(150.1,42.4,1,1,0,0,0,58.1,25.4);
 
-	this.timeline.addTween(cjs.Tween.get(this.instance_5).wait(66).to({alpha:0.5},0).wait(1).to({alpha:0},0).to({_off:true},1).wait(78));
+	this.timeline.addTween(cjs.Tween.get(this.instance_6).wait(66).to({alpha:0.5},0).wait(1).to({alpha:0},0).to({_off:true},1).wait(78));
 
 	// scheinwerfer
-	this.instance_6 = new lib.Symbol1();
-	this.instance_6.parent = this;
-	this.instance_6.setTransform(144.4,108.8,1,1,0,0,0,106.4,212.8);
-	this.instance_6.alpha = 0;
-	this.instance_6._off = true;
+	this.instance_7 = new lib.Symbol1();
+	this.instance_7.parent = this;
+	this.instance_7.setTransform(144.4,116.4,1,1,0,0,0,106.4,212.8);
+	this.instance_7.alpha = 0;
+	this.instance_7._off = true;
 
-	this.timeline.addTween(cjs.Tween.get(this.instance_6).wait(5).to({_off:false},0).wait(1).to({regY:212.9,y:108.9,alpha:0.033},0).wait(1).to({alpha:0.067},0).wait(1).to({alpha:0.1},0).wait(1).to({alpha:0.133},0).wait(1).to({alpha:0.167},0).wait(1).to({alpha:0.2},0).wait(1).to({alpha:0.233},0).wait(1).to({alpha:0.267},0).wait(1).to({alpha:0.3},0).wait(1).to({alpha:0.333},0).wait(1).to({alpha:0.367},0).wait(1).to({alpha:0.4},0).wait(1).to({alpha:0.433},0).wait(1).to({alpha:0.467},0).wait(1).to({alpha:0.5},0).wait(1).to({alpha:0.533},0).wait(1).to({alpha:0.567},0).wait(1).to({alpha:0.6},0).wait(1).to({alpha:0.633},0).wait(1).to({alpha:0.667},0).wait(1).to({alpha:0.7},0).wait(1).to({alpha:0.733},0).wait(1).to({alpha:0.767},0).wait(1).to({alpha:0.8},0).wait(1).to({alpha:0.833},0).wait(1).to({alpha:0.867},0).wait(1).to({alpha:0.9},0).wait(1).to({alpha:0.933},0).wait(1).to({alpha:0.967},0).wait(1).to({alpha:1},0).wait(111));
+	this.timeline.addTween(cjs.Tween.get(this.instance_7).wait(5).to({_off:false},0).wait(1).to({regY:212.9,y:116.5,alpha:0.033},0).wait(1).to({alpha:0.067},0).wait(1).to({alpha:0.1},0).wait(1).to({alpha:0.133},0).wait(1).to({alpha:0.167},0).wait(1).to({alpha:0.2},0).wait(1).to({alpha:0.233},0).wait(1).to({alpha:0.267},0).wait(1).to({alpha:0.3},0).wait(1).to({alpha:0.333},0).wait(1).to({alpha:0.367},0).wait(1).to({alpha:0.4},0).wait(1).to({alpha:0.433},0).wait(1).to({alpha:0.467},0).wait(1).to({alpha:0.5},0).wait(1).to({alpha:0.533},0).wait(1).to({alpha:0.567},0).wait(1).to({alpha:0.6},0).wait(1).to({alpha:0.633},0).wait(1).to({alpha:0.667},0).wait(1).to({alpha:0.7},0).wait(1).to({alpha:0.733},0).wait(1).to({alpha:0.767},0).wait(1).to({alpha:0.8},0).wait(1).to({alpha:0.833},0).wait(1).to({alpha:0.867},0).wait(1).to({alpha:0.9},0).wait(1).to({alpha:0.933},0).wait(1).to({alpha:0.967},0).wait(1).to({alpha:1},0).wait(111));
 
 }).prototype = p = new cjs.MovieClip();
 p.nominalBounds = new cjs.Rectangle(242,142,116.3,50.8);
@@ -252,6 +280,7 @@ lib.properties = {
 		{src:"images/filml.png", id:"filml"},
 		{src:"images/filmr.png", id:"filmr"},
 		{src:"images/logo.png", id:"logo"},
+		{src:"images/raeder.png", id:"raeder"},
 		{src:"images/schein.jpg", id:"schein"},
 		{src:"images/text.png", id:"text"}
 	],

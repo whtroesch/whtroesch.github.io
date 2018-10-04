@@ -109,15 +109,15 @@ function handleComplete(evt,comp) {
 <!-- write your code here -->
 </head>
 <body onload="init();" style="margin:0px;">
-	<a href="#clicktag" id="IAB_clicktag" target=“_blank“></a>
+	<a href="#clicktag" id="IAB_clicktag" target=“_blank“>
 		<div id="animation_container" style="background-color:rgba(0, 0, 0, 1.00); width:639px; height:150px">
 			<canvas id="canvas" width="639" height="150" style="position: absolute; display: block; background-color:rgba(0, 0, 0, 1.00);"></canvas>
 			<div id="dom_overlay_container" style="pointer-events:none; overflow:hidden; width:639px; height:150px; position: absolute; left: 0px; top: 0px; display: block;">
 			</div>
 		</div>
 	</a>
-	<script>
-		document.getElementById('IAB_clicktag').setAttribute('href', getUriParams.clicktag);
-	</script>
+<script>
+	document.getElementById('IAB_clicktag').setAttribute('href', getUriParams.clicktag);
+</script>
 </body>
 </html>
