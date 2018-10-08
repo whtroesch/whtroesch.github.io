@@ -20,7 +20,7 @@
         }
         
         body {
-            color: #ffffff;
+            color: #3b3a3a;
             font-family: 'Open Sans', sans-serif;
             font-size: 100%;
             height: 100%;
@@ -29,9 +29,37 @@
         }
         
         .top-logo {
-            margin-bottom: 3%;
+            margin-bottom: 4%;
             height: auto;
+            display: flex;
+            justify-content: space-between;
+            background-color: #eeeeee;
+            padding: 2% 2%;
+        }
+
+        .top-faber{
+            width: 28%;
             display: inline-block;
+            margin-left: 1%;
+            margin-right: 5%;
+        }
+
+        .top-moto{
+            width: 24%;
+            display: inline-block;
+            margin: 1% 1%;
+        }
+
+        .top-honda{
+            width: 8%;
+            display: inline-block;
+            margin: 1% 1%;
+        }
+
+        .top-piaggio{
+            width: 21%;
+            display: inline-block;
+            margin: 1% 1%;
         }
     
         .superbrand-wrapper {
@@ -83,8 +111,8 @@
         }
         
         .itemPrice {
-            background-color: #f18800;
-            color: #ffffff;
+            background-color: #eeeeee;
+            color: #3b3a3a;
             font-weight: bold;
             padding: 2px 4px;
             right: 0;
@@ -93,9 +121,9 @@
         }
         
         .itemTitle {
-            background-color: #f18800;
+            background-color: #eeeeee;
             bottom: 0;
-            color: #ffffff;
+            color: #3b3a3a;
             font-size: 1.4vh;
             font-weight: bold;
             left: 0;
@@ -117,7 +145,7 @@
         
         .bottom-logo {
             height: auto;
-            background-color: #f18800;
+            background-color: #eeeeee;
             display: inline-block;
         }
 
@@ -137,7 +165,7 @@
         }
             
         .footerHead {
-            border-bottom: solid 1px #FFC780;
+            border-bottom: solid 1px #3b3a3a;
             padding-bottom: 5px;
             margin-bottom: 10px;
             font-size: 1.5vh;
@@ -163,17 +191,29 @@
 </head>
 
 <body>
-    <main id="superbrand" class="superbrand-wrapper" style="background-color: #eeeeee;">
-		<section class="top-logo">
-			<div style="display: flex; justify-content: space-between; width: 100%;">
-				<a id="superbrandButton1" target="_blank" href="#" style="margin-left: 1%; flex: 1;">
+    <main id="superbrand" class="superbrand-wrapper" style="background-color: #f18800;">
+		<div class="top-logo">
+			<div class="top-faber">
+				<a id="superbrandButton1" target="_blank" href="#">
                     <img class="bildlogo" src="logo.png">
                 </a>
-                <a target="_blank" href="#" style="margin-left: 19%; flex: 1;">
-                    <img class="bildlogo" id="slide" name="slide" src="guzzi.png">
-	            </a>
             </div>
-		</section>
+            <div class="top-moto">
+				<a id="superbrandButton2" target="_blank" href="#">
+                    <img class="bildlogo" src="guzzi.png">
+                </a>
+            </div>
+            <div class="top-honda">
+                <a id="superbrandButton3" target="_blank" href="#">
+                    <img class="bildlogo" src="honda.png">
+                </a>
+            </div>
+            <div class="top-piaggio">
+                <a id="superbrandButton4" target="_blank" href="#">
+                    <img class="bildlogo" src="piaggio.png">
+                </a>
+            </div>
+        </div>
         <section class="productAtz">
             <article>
                 <a target="_top" href="#">
@@ -227,13 +267,13 @@
 		<section class="bottom-logo">
             <div class="footergw">
                 <div class="footerHead">Alles für Zweirad-Fans</div>
-                    <a id="superbrandButton3" href="#" target="_blank" title="Alles für Zweirad-Fans auf faber.at" class="linklogo">
+                    <a id="superbrandButton5" href="#" target="_blank" title="Alles für Zweirad-Fans auf faber.at" class="linklogo">
                         <img class="bildlogo" src="faberf.png" alt="Faber Logo">
                     </a>
             </div>
             <div class="footerMipiace">
                 <div class="footerHead">Alles für Italien-Liebhaber</div>
-                    <a id="superbrandButton4" href="#" target="_blank" title="Alles für Italien-Liebhaber auf miplace.at" class="linklogo">
+                    <a id="superbrandButton6" href="#" target="_blank" title="Alles für Italien-Liebhaber auf miplace.at" class="linklogo">
                         <img class="bildlogo" src="mipiace.png" alt="Mipiace Logo">
                     </a>
             </div>
@@ -252,41 +292,7 @@
             }
             return queryString;
         };
-      ///diashow
-        var i = 0;
-        var images = [];
-        var links = [];
-        var time = 6000;
-
-        images[0] = 'guzzi.png';
-        links[0] = getUriParams()["clicktag5"] || null;
-
-        images[1] = 'piaggio.png';
-        links[1] = getUriParams()["clicktag6"] || null;
-
-        images[2] = 'honda.png';
-        links[2] = getUriParams()["clicktag7"] || null;
-
-
-        function changeImg(){$("#slide").fadeOut(1500, function(){
-            document.slide.src = images [i];
-            $("#slide").fadeIn(1500);
-            $("#superbrandButton2").attr("href", links[i]);
-
-            if(i < images.length -1){
-                i++;
-                } else {
-                    i = 0;                    
-                    }});
-                    
-            setTimeout("changeImg()", time);
-        }
-
-        window.onload = changeImg;
-
-
-    ///diashowend    
-
+ 
         var config = {
             items: null,
             itemIndex: 0,
@@ -377,8 +383,8 @@
                 if (target1 != null) $("#superbrandButton1").attr("href", target1);
 
                 // button
-                // var target2 = getUriParams()["clicktag2"] || null;
-                //if (target2 != null) $("#superbrandButton2").attr("href", target2);
+                var target2 = getUriParams()["clicktag2"] || null;
+                if (target2 != null) $("#superbrandButton2").attr("href", target2);
 
                 // button
                 var target3 = getUriParams()["clicktag3"] || null;
@@ -395,10 +401,6 @@
                 // button
                 var target6 = getUriParams()["clicktag6"] || null;
                 if (target6 != null) $("#superbrandButton6").attr("href", target6);    
-
-                // button
-                var target7 = getUriParams()["clicktag7"] || null;
-                if (target7 != null) $("#superbrandButton7").attr("href", target7);
 
                 // redirect
                 config.redirect = getUriParams()["feed"] || null;
