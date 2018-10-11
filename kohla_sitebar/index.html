@@ -1,0 +1,422 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <script language="JavaScript" type="text/javascript">
+    </script>
+    <style type="text/css">
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        @font-face {
+        font-family: 'BMWTypeGlobalPro-Bold';
+        src: url('https://whtroesch.github.io/fonts/BMWTypeGlobalPro-Bold.ttf');
+        }
+
+        html {
+            height: 100%;
+            width: 100%;
+        }
+        
+        body {
+            color: #ffffff;
+            font-family: 'BMWTypeGlobalPro-Bold', Helvetica, sans-serif;
+            font-size: 100%;
+            height: 100%;
+            width: 100%;
+            background-color: white;
+        }
+        
+        .top-logo {
+            margin-bottom: 2%;
+            height: 11%;
+            z-index:2;
+        }
+        
+        .superbrand-wrapper {
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: -webkit-flex;
+            display: -moz-box;
+            display: flex;
+            padding: 1% 2% 5% 2%;
+            -webkit-box-direction: normal;
+            -moz-box-direction: normal;
+            -webkit-box-orient: vertical;
+            -moz-box-orient: vertical;
+            -webkit-flex-direction: column;
+            -ms-flex-direction: column;
+            flex-direction: column;
+        }
+        
+        .productAtz {
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: -webkit-flex;
+            display: -moz-box;
+            display: flex;
+            -webkit-flex-wrap: wrap;
+            -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
+            -webkit-justify-content: space-between;
+            justify-content: space-between;
+            height: 69%;
+            margin-bottom: 3%;
+            z-index:1;
+        }
+        
+        .productAtz article {
+            height: 33.3%;
+            width: 49%;
+            padding-bottom: 10px;
+        }
+        
+        .itemBox1 {
+            background-image: url(266639821.jpg);
+            background-position: center center;
+            background-repeat: no-repeat;
+            background-size: contain;
+            border: 1px solid rgba(142, 142, 142, 0.8);
+            height: 100%;
+            width: 100%;
+        }
+
+        .itemBox2 {
+            background-image: url(266639837.jpg);
+            background-position: center center;
+            background-repeat: no-repeat;
+            background-size: contain;
+            border: 1px solid rgba(142, 142, 142, 0.8);
+            height: 100%;
+            width: 100%;
+        }
+
+        .itemBox3 {
+            background-image: url(268601713.jpg);
+            background-position: center center;
+            background-repeat: no-repeat;
+            background-size: contain;
+            border: 1px solid rgba(142, 142, 142, 0.8);
+            height: 100%;
+            width: 100%;
+        }
+
+        .itemBox4 {
+            background-image: url(266639852.jpg);
+            background-position: center center;
+            background-repeat: no-repeat;
+            background-size: contain;
+            border: 1px solid rgba(142, 142, 142, 0.8);
+            height: 100%;
+            width: 100%;
+        }
+
+        .itemBox5 {
+            background-image: url(268601728.jpg);
+            background-position: center center;
+            background-repeat: no-repeat;
+            background-size: contain;
+            border: 1px solid rgba(142, 142, 142, 0.8);
+            height: 100%;
+            width: 100%;
+        }
+
+        .itemBox6 {
+            background-image: url(266347489.jpg);
+            background-position: center center;
+            background-repeat: no-repeat;
+            background-size: contain;
+            border: 1px solid rgba(142, 142, 142, 0.8);
+            height: 100%;
+            width: 100%;
+        }
+        
+        
+        .itemTitle {
+            background-color: rgba(142, 142, 142, 0.8);
+            bottom: 0;
+            color: #fff;
+            font-size: 1.4vh;
+            left: 0;
+            padding: 2px 4px;
+            font-weight: bold;
+            position: absolute;
+            width: 100%;
+            height: 19%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .scaleBox {
+            cursor: pointer;
+            transform: scale(1);
+            transition: transform 0.125s linear;
+        }
+        
+        .scaleBox:hover {
+            transform: scale(1.05);
+        }
+        
+        .shadowBox {
+            border: 0;
+            box-shadow: 0 0 10px rgba(143,143,143, 0.5);
+            transition: box-shadow 0.125s linear;
+        }
+        
+        .shadowBox:hover {
+            box-shadow: 0 0 10px #000000;
+        }
+        
+        .bottom-logo {
+            height: 13%;
+        }
+
+    </style>
+</head>
+
+<body>
+    <main id="superbrand" class="superbrand-wrapper">
+		<section class="top-logo">
+			<div>
+				<a id="superbrandButton1" target="_blank" href="#" style="height: 100%;">
+                    <img src="head2.png" style="border:0; width:100%;">
+	            </a>
+			</div>
+		</section>
+        <section class="productAtz">
+            <article>
+				<a id="superbrandButton2" target="_blank" href="#" style="height: 100%;">
+                    <div class="itemBox1 scaleBox itemBoxHorizontal">
+                        <div class="itemTitle">BMW 530d xDrive</div>
+                    </div>
+                </a>
+            </article>
+            <article>
+				<a id="superbrandButton3" target="_blank" href="#" style="height: 100%;">
+                    <div class="itemBox2 scaleBox itemBoxHorizontal">
+                        <div class="itemTitle">BMW 418d Coupé</div>
+                    </div>
+                </a>
+            </article>
+            <article>
+				<a id="superbrandButton4" target="_blank" href="#" style="height: 100%;">
+                    <div class="itemBox3 scaleBox itemBoxHorizontal">
+                        <div class="itemTitle">BMW 116d 5-Türer</div>
+                    </div>
+                </a>
+            </article>
+            <article>
+				<a id="superbrandButton5" target="_blank" href="#" style="height: 100%;">
+                    <div class="itemBox4 scaleBox itemBoxHorizontal">
+                        <div class="itemTitle">BMW X1 xDrive18d</div>
+                    </div>
+                </a>
+            </article>
+            <article>
+				<a id="superbrandButton6" target="_blank" href="#" style="height: 100%;">
+                    <div class="itemBox5 scaleBox itemBoxHorizontal">
+                        <div class="itemTitle">BMW 218d Active Tourer</div>
+                    </div>
+                </a>
+            </article>
+            <article>
+				<a id="superbrandButton7" target="_blank" href="#" style="height: 100%;">
+                    <div class="itemBox6 scaleBox itemBoxHorizontal">
+                        <div class="itemTitle">MINI Cooper D Countryman</div>
+                    </div>
+                </a>
+            </article>
+        </section>
+		<section class="bottom-logo">
+				<div>
+                    <a id="superbrandButton8" target="_blank" href="#" style="display: flex; justify-content: center;">
+                        <img class="shadowBox" src="button.jpg" style="border:0; max-width: 100%; height: auto;">
+                    </a>
+			    </div>
+		</section>
+    </main>
+    <script language="JavaScript" type="text/javascript">
+        var config = {
+            items: null,
+            itemIndex: 0,
+            pageDelay: 10000,
+            perPage: null,
+            redirect: null
+        };
+
+        var preloadingFiles = [];
+        var preloadingImages = [];
+
+        function arrayShuffle(array) {
+            var currentIndex = array.length,
+                temporaryValue, randomIndex;
+
+            while (currentIndex !== 0) {
+                // pick a remaining element
+                randomIndex = Math.floor(Math.random() * currentIndex);
+                currentIndex--;
+
+                // swap
+                temporaryValue = array[currentIndex];
+                array[currentIndex] = array[randomIndex];
+                array[randomIndex] = temporaryValue;
+            }
+
+            return array;
+        }
+
+        function arrayTrim(array) {
+            var surplus = array.length % config.perPage;
+
+            if (surplus > 0) {
+                for (var i = 0; i < surplus; i++) {
+                    array.pop();
+                }
+            }
+
+            return array;
+        }
+
+        function cropTitle(title) {
+            if (title.length > 40) {
+                title = title.substr(0, 39).trim() + "&hellip;";
+            }
+
+            return title;
+        }
+
+        function dynamicResize() {
+            var availableHeight = $(window).innerHeight();
+            var availableWidth = $(window).innerWidth();
+
+            // minimum
+            var targetHeight = 600;
+            var targetWidth = 300;
+
+            // adapt
+            if (availableHeight > 599 && availableWidth > 299) {
+                if ((availableWidth / availableHeight * 2) < 1) {
+                    var targetHeight = availableWidth * 2;
+                    var targetWidth = availableWidth;
+                } else {
+                    var targetHeight = availableHeight
+                    var targetWidth = availableHeight / 2;
+                }
+            }
+
+            // maximum
+            if (availableHeight > 1200 && availableWidth > 600) {
+                var targetHeight = 1200;
+                var targetWidth = 600;
+            }
+
+            $("#superbrand").css({
+                "height": targetHeight,
+                "width": targetWidth
+            });
+        }
+
+        function jqReady() {
+            $(document).ready(function() {
+                dynamicResize();
+                window.setInterval(dynamicResize, 250);
+
+                // button
+                var target1 = getUriParams()["clicktag1"] || null;
+                if (target1 != null) $("#superbrandButton1").attr("href", target1);
+
+                // button
+                var target2 = getUriParams()["clicktag2"] || null;
+                if (target2 != null) $("#superbrandButton2").attr("href", target2);
+
+                // button
+                var target3 = getUriParams()["clicktag3"] || null;
+                if (target3 != null) $("#superbrandButton3").attr("href", target3);
+                
+                // button
+                var target4 = getUriParams()["clicktag4"] || null;
+                if (target4 != null) $("#superbrandButton4").attr("href", target4);
+
+                 // button
+                var target5 = getUriParams()["clicktag5"] || null;
+                if (target5 != null) $("#superbrandButton5").attr("href", target5);
+
+                // button
+                var target6 = getUriParams()["clicktag6"] || null;
+                if (target6 != null) $("#superbrandButton6").attr("href", target6);
+
+                // button
+                var target7 = getUriParams()["clicktag7"] || null;
+                if (target7 != null) $("#superbrandButton7").attr("href", target7);
+                
+                // button
+                var target8 = getUriParams()["clicktag8"] || null;
+                if (target8 != null) $("#superbrandButton8").attr("href", target8);
+
+
+                // redirect
+                config.redirect = getUriParams()["feed"] || null;
+
+                preloading(0);
+            });
+        }
+
+        function preloading(index) {
+            if (index >= preloadingFiles.length) {
+                dynamicResize();
+                window.setInterval(dynamicResize, 250);
+
+                config.perPage = $(".itemBox").length;
+
+                var jsonUrl = getUriParams()["jsonFeed"] || window["jsonFeed"] || null;
+                if (jsonUrl != null) {
+                    $.getJSON(jsonUrl, {
+                        "shopId": config.shopId
+                    }, function(data) {
+                        config.items = arrayTrim(arrayShuffle(data.items));
+                        shopCycle();
+                    });
+                }
+            } else {
+                preloadingImages[index] = new Image();
+                preloadingImages[index].src = preloadingFiles[index];
+                preloadingImages[index].onload = function() {
+                    preloading(++index);
+                }
+            }
+        }
+
+
+
+
+        window.getUriParams = function() {
+            var queryString = {};
+            var query = window.location.search.substring(1);
+            var keyValueArray = query.split("&");
+            if (keyValueArray.length <= 0) return queryString;
+            for (var i = 0; i < keyValueArray.length; i++) {
+                var keyValue = keyValueArray[i].split("=");
+                var value = decodeURIComponent(keyValue[1]);
+                if (value != "" && keyValue[0] != "") queryString[keyValue[0]] = value;
+            }
+            return queryString;
+        };
+
+        if (typeof jQuery == "undefined") {
+            var headTag = document.getElementsByTagName("head")[0];
+            var jqTag = document.createElement("script");
+            jqTag.src = "https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js";
+            jqTag.onload = jqReady;
+            jqTag.type = "text/javascript";
+            headTag.appendChild(jqTag);
+        } else {
+            jqReady();
+        }
+    </script>
+</body>
+
+</html>
