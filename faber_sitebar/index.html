@@ -1,5 +1,6 @@
 <!doctype html>
 <html>
+
 <head>
     <meta charset="UTF-8">
     <script language="JavaScript" type="text/javascript">
@@ -7,18 +8,19 @@
         var jsonFeed = "https://mhauens.github.io/tom_json/test.json";
     </script>
     <style type="text/css">
-    @import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700');
+        @import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700');
+
         * {
             box-sizing: border-box;
             margin: 0;
             padding: 0;
         }
-        
+
         html {
             height: 100%;
             width: 100%;
         }
-        
+
         body {
             color: #3b3a3a;
             font-family: 'Open Sans', sans-serif;
@@ -27,41 +29,31 @@
             width: 100%;
             background-color: white;
         }
-        
+
         .top-logo {
             margin-bottom: 4%;
             height: auto;
             display: flex;
             justify-content: space-between;
             background-color: #eeeeee;
-            padding: 2% 2%;
+            padding: 2% 2% 1.5% 2%;
         }
 
-        .top-faber{
-            width: 28%;
-            display: inline-block;
+        .top-faber {
+            width: 30%;
+            display: flex;
             margin-left: 1%;
-            margin-right: 5%;
+            justify-content: center;
+            align-items: center;
+
         }
 
-        .top-moto{
-            width: 24%;
-            display: inline-block;
-            margin: 1% 1%;
+        .top-slide {
+            width: 60%;
+            display: flex;
+            margin-right: 1%;
         }
 
-        .top-honda{
-            width: 8%;
-            display: inline-block;
-            margin: 1% 1%;
-        }
-
-        .top-piaggio{
-            width: 21%;
-            display: inline-block;
-            margin: 1% 1%;
-        }
-    
         .superbrand-wrapper {
             display: -webkit-box;
             display: -ms-flexbox;
@@ -77,7 +69,7 @@
             -ms-flex-direction: column;
             flex-direction: column;
         }
-        
+
         .productAtz {
             display: -webkit-box;
             display: -ms-flexbox;
@@ -92,13 +84,13 @@
             height: 78%;
             margin-bottom: 3%;
         }
-        
+
         .productAtz article {
             height: 33.3%;
             width: 49%;
             padding-bottom: 10px;
         }
-        
+
         .itemBox {
             background-color: rgba(255, 255, 255, 1);
             background-position: center center;
@@ -109,7 +101,7 @@
             opacity: 0;
             width: 100%;
         }
-        
+
         .itemPrice {
             background-color: #eeeeee;
             color: #3b3a3a;
@@ -119,7 +111,7 @@
             top: 0;
             position: absolute;
         }
-        
+
         .itemTitle {
             background-color: #eeeeee;
             bottom: 0;
@@ -130,40 +122,40 @@
             padding: 2px 4px;
             position: absolute;
             width: 100%;
-            height: 49px;
+            height: 20%;
         }
-        
+
         .scaleBox {
             cursor: pointer;
             transform: scale(1);
             transition: transform 0.125s linear;
         }
-        
+
         .scaleBox:hover {
             transform: scale(1.05);
         }
-        
+
         .bottom-logo {
             height: auto;
             background-color: #eeeeee;
             display: inline-block;
         }
 
-        .footerMipiace{
+        .footerMipiace {
             width: 48%;
             display: inline-block;
             vertical-align: top;
             padding: 2% 2% 2% 2%;
         }
 
-        .footergw{
+        .footergw {
             width: 48%;
             display: inline-block;
             vertical-align: top;
             padding: 2% 2% 2% 2%;
-            margin-left:1%;
+            margin-left: 1%;
         }
-            
+
         .footerHead {
             border-bottom: solid 1px #3b3a3a;
             padding-bottom: 5px;
@@ -179,9 +171,9 @@
         .bildlogo {
             max-width: 100%;
             height: auto;
-            border:0;
-            transition:box-shadow 0.125s linear;
-            opacity: 1; 
+            border: 0;
+            transition: box-shadow 0.125s linear;
+            opacity: 1;
         }
 
         .bildlogo:hover {
@@ -192,25 +184,21 @@
 
 <body>
     <main id="superbrand" class="superbrand-wrapper" style="background-color: #f18800;">
-		<div class="top-logo">
-			<div class="top-faber">
-				<a id="superbrandButton1" target="_blank" href="#">
-                    <img class="bildlogo" src="logo.png">
+        <div class="top-logo">
+            <div class="top-faber">
+                <a id="superbrandButton1" target="_blank" href="#">
+                    <img class="bildlogo" src="logo.png" />
                 </a>
             </div>
-            <div class="top-moto">
-				<a id="superbrandButton2" target="_blank" href="#">
-                    <img class="bildlogo" src="guzzi.png">
+            <div class="top-slide">
+                <a id="buttonSlide" target="_blank" href="#" style="flex: 1;">
+                    <img class="bildlogo" id="slide" name="slide1" src="logo_akrapovic.png" />
                 </a>
-            </div>
-            <div class="top-honda">
-                <a id="superbrandButton3" target="_blank" href="#">
-                    <img class="bildlogo" src="honda.png">
+                <a id="buttonSlide2" target="_blank" href="#" style="margin-left: 3%; flex: 1;">
+                    <img class="bildlogo" id="slide2" name="slide2" src="logo_arai.png" />
                 </a>
-            </div>
-            <div class="top-piaggio">
-                <a id="superbrandButton4" target="_blank" href="#">
-                    <img class="bildlogo" src="piaggio.png">
+                <a id="buttonSlide3" target="_blank" href="#" style="margin-left: 3%; flex: 1;">
+                    <img class="bildlogo" id="slide3" name="slide3" src="logo_derbi.png" />
                 </a>
             </div>
         </div>
@@ -264,23 +252,24 @@
                 </a>
             </article>
         </section>
-		<section class="bottom-logo">
+        <section class="bottom-logo">
             <div class="footergw">
                 <div class="footerHead">Alles für Zweirad-Fans</div>
-                    <a id="superbrandButton5" href="#" target="_blank" title="Alles für Zweirad-Fans auf faber.at" class="linklogo">
-                        <img class="bildlogo" src="faberf.png" alt="Faber Logo">
-                    </a>
+                <a id="superbrandButton21" href="#" target="_blank" title="Alles für Zweirad-Fans auf faber.at" class="linklogo">
+                    <img class="bildlogo" src="faberf.png" alt="Faber Logo" />
+                </a>
             </div>
             <div class="footerMipiace">
                 <div class="footerHead">Alles für Italien-Liebhaber</div>
-                    <a id="superbrandButton6" href="#" target="_blank" title="Alles für Italien-Liebhaber auf miplace.at" class="linklogo">
-                        <img class="bildlogo" src="mipiace.png" alt="Mipiace Logo">
-                    </a>
+                <a id="superbrandButton22" href="#" target="_blank" title="Alles für Italien-Liebhaber auf miplace.at"
+                    class="linklogo">
+                    <img class="bildlogo" src="mipiace.png" alt="Mipiace Logo" />
+                </a>
             </div>
-		</section>
+        </section>
     </main>
     <script language="JavaScript" type="text/javascript">
-        window.getUriParams = function() {
+        window.getUriParams = function () {
             var queryString = {};
             var query = window.location.search.substring(1);
             var keyValueArray = query.split("&");
@@ -292,7 +281,108 @@
             }
             return queryString;
         };
- 
+
+        ///diashow
+        var images1 = [];
+        var images2 = [];
+        var images3 = [];
+        var links1 = [];
+        var links2 = [];
+        var links3 = [];
+        var time = 6000;
+
+        //1st
+        images1[0] = 'logo_akrapovic.png';
+        links1[0] = getUriParams()["clicktag3"] || null;
+
+        images1[1] = 'logo_gilera.png';
+        links1[1] = getUriParams()["clicktag4"] || null;
+
+        images1[2] = 'logo_hepco.png';
+        links1[2] = getUriParams()["clicktag5"] || null;
+
+        images1[3] = 'logo_ls2.png';
+        links1[3] = getUriParams()["clicktag6"] || null;
+
+        images1[4] = 'logo_piaggio.png';
+        links1[4] = getUriParams()["clicktag7"] || null;
+
+        images1[5] = 'logo_scorpion.png';
+        links1[5] = getUriParams()["clicktag8"] || null;
+
+        //2nd
+        images2[0] = 'logo_arai.png';
+        links2[0] = getUriParams()["clicktag9"] || null;
+
+        images2[1] = 'logo_givi.png';
+        links2[1] = getUriParams()["clicktag10"] || null;
+
+        images2[2] = 'logo_hjc.png';
+        links2[2] = getUriParams()["clicktag11"] || null;
+
+        images2[3] = 'logo_marchio.png';
+        links2[3] = getUriParams()["clicktag12"] || null;
+
+        images2[4] = 'logo_premier.png';
+        links2[4] = getUriParams()["clicktag13"] || null;
+
+        images2[5] = 'logo_tucano.png';
+        links2[5] = getUriParams()["clicktag14"] || null;
+
+        //3rd
+        images3[0] = 'logo_derbi.png';
+        links3[0] = getUriParams()["clicktag15"] || null;
+
+        images3[1] = 'logo_helmo.png';
+        links3[1] = getUriParams()["clicktag16"] || null;
+
+        images3[2] = 'logo_honda.png';
+        links3[2] = getUriParams()["clicktag17"] || null;
+
+        images3[3] = 'logo_motoguzzi.png';
+        links3[3] = getUriParams()["clicktag18"] || null;
+
+        images3[4] = 'logo_richa.png';
+        links3[4] = getUriParams()["clicktag19"] || null;
+
+        images3[5] = 'logo_vespa.png';
+        links3[5] = getUriParams()["clicktag20"] || null;
+
+
+        function changeImg(i) {
+
+            if (i < images1.length - 1) {
+                i++;
+            } else {
+                i = 0;
+            }
+
+            $("#slide").fadeOut(1500, function () {
+                document.slide.src = images1[i];
+                $("#slide").fadeIn(1500);
+                $("#buttonSlide").attr("href", links1[i]);
+            });
+
+            $("#slide2").fadeOut(1500, function () {
+                document.slide2.src = images2[i];
+                $("#slide2").fadeIn(1500);
+                $("#buttonSlide2").attr("href", links2[i]);
+            });
+
+            $("#slide3").fadeOut(1500, function () {
+                document.slide3.src = images3[i];
+                $("#slide3").fadeIn(1500);
+                $("#buttonSlide3").attr("href", links3[i]);
+            });
+
+            setTimeout(function () { changeImg(i) }, time);
+        }
+
+        window.onload = function () { changeImg(0) };
+
+
+        ///diashowend  
+
         var config = {
             items: null,
             itemIndex: 0,
@@ -374,7 +464,7 @@
         }
 
         function jqReady() {
-            $(document).ready(function() {
+            $(document).ready(function () {
                 dynamicResize();
                 window.setInterval(dynamicResize, 250);
 
@@ -383,24 +473,88 @@
                 if (target1 != null) $("#superbrandButton1").attr("href", target1);
 
                 // button
-                var target2 = getUriParams()["clicktag2"] || null;
-                if (target2 != null) $("#superbrandButton2").attr("href", target2);
+                //var target2 = getUriParams()["clicktag2"] || null;
+                //if (target2 != null) $("#superbrandButton2").attr("href", target2);
 
                 // button
                 var target3 = getUriParams()["clicktag3"] || null;
                 if (target3 != null) $("#superbrandButton3").attr("href", target3);
-                
+
                 // button
                 var target4 = getUriParams()["clicktag4"] || null;
                 if (target4 != null) $("#superbrandButton4").attr("href", target4);
-                
+
                 // button
                 var target5 = getUriParams()["clicktag5"] || null;
                 if (target5 != null) $("#superbrandButton5").attr("href", target5);
 
                 // button
                 var target6 = getUriParams()["clicktag6"] || null;
-                if (target6 != null) $("#superbrandButton6").attr("href", target6);    
+                if (target6 != null) $("#superbrandButton6").attr("href", target6);
+
+                // button
+                var target7 = getUriParams()["clicktag7"] || null;
+                if (target7 != null) $("#superbrandButton7").attr("href", target7);
+
+                // button
+                var target8 = getUriParams()["clicktag8"] || null;
+                if (target8 != null) $("#superbrandButton8").attr("href", target8);
+
+                // button
+                var target9 = getUriParams()["clicktag9"] || null;
+                if (target9 != null) $("#superbrandButton9").attr("href", target9);
+
+                // button
+                var target10 = getUriParams()["clicktag10"] || null;
+                if (target10 != null) $("#superbrandButton10").attr("href", target10);
+
+                // button
+                var target11 = getUriParams()["clicktag11"] || null;
+                if (target11 != null) $("#superbrandButton11").attr("href", target11);
+
+                // button
+                var target12 = getUriParams()["clicktag12"] || null;
+                if (target12 != null) $("#superbrandButton12").attr("href", target12);
+
+                // button
+                var target13 = getUriParams()["clicktag13"] || null;
+                if (target13 != null) $("#superbrandButton13").attr("href", target13);
+
+                // button
+                var target14 = getUriParams()["clicktag14"] || null;
+                if (target14 != null) $("#superbrandButton14").attr("href", target14);
+
+                // button
+                var target15 = getUriParams()["clicktag15"] || null;
+                if (target15 != null) $("#superbrandButton15").attr("href", target15);
+
+                // button
+                var target16 = getUriParams()["clicktag16"] || null;
+                if (target16 != null) $("#superbrandButton16").attr("href", target16);
+
+                // button
+                var target17 = getUriParams()["clicktag17"] || null;
+                if (target17 != null) $("#superbrandButton17").attr("href", target17);
+
+                // button
+                var target18 = getUriParams()["clicktag18"] || null;
+                if (target18 != null) $("#superbrandButton18").attr("href", target18);
+
+                // button
+                var target19 = getUriParams()["clicktag19"] || null;
+                if (target19 != null) $("#superbrandButton19").attr("href", target19);
+
+                // button
+                var target20 = getUriParams()["clicktag20"] || null;
+                if (target20 != null) $("#superbrandButton20").attr("href", target20);
+
+                // button
+                var target21 = getUriParams()["clicktag21"] || null;
+                if (target21 != null) $("#superbrandButton21").attr("href", target21);
+
+                // button
+                var target22 = getUriParams()["clicktag22"] || null;
+                if (target22 != null) $("#superbrandButton22").attr("href", target22);
 
                 // redirect
                 config.redirect = getUriParams()["feed"] || null;
@@ -420,7 +574,7 @@
                 if (jsonUrl != null) {
                     $.getJSON(jsonUrl, {
                         "shopId": config.shopId
-                    }, function(data) {
+                    }, function (data) {
                         config.items = arrayTrim(arrayShuffle(data.items));
                         shopCycle();
                     });
@@ -428,7 +582,7 @@
             } else {
                 preloadingImages[index] = new Image();
                 preloadingImages[index].src = preloadingFiles[index];
-                preloadingImages[index].onload = function() {
+                preloadingImages[index].onload = function () {
                     preloading(++index);
                 }
             }
