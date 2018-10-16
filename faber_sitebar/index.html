@@ -32,7 +32,7 @@
 
         .top-logo {
             margin-bottom: 4%;
-            height: auto;
+            height: 8%;
             display: flex;
             justify-content: space-between;
             background-color: #eeeeee;
@@ -52,6 +52,8 @@
             width: 60%;
             display: flex;
             margin-right: 1%;
+            justify-content: center;
+            align-items: center;
         }
 
         .superbrand-wrapper {
@@ -177,7 +179,29 @@
             opacity: 1;
         }
 
-        .bildlogo:hover {
+        .bildlogo1 {
+            width: 100%;
+            height: auto !important;
+            min-height: 1px;
+            border: 0;
+            transition: box-shadow 0.125s linear;
+            opacity: 1;
+        }
+
+        .bildlogo2 {
+            width: 95%;
+            height: auto !important;
+            min-height: 1px;
+            border: 0;
+            transition: box-shadow 0.125s linear;
+            opacity: 1;
+        }
+
+        .bildlogo1:hover {
+            opacity: 0.6;
+        }
+
+        .bildlogo2:hover {
             opacity: 0.6;
         }
     </style>
@@ -188,18 +212,18 @@
         <div class="top-logo">
             <div class="top-faber">
                 <a id="superbrandButton1" target="_blank" href="#">
-                    <img class="bildlogo" src="logo.png" />
+                    <img class="bildlogo1" src="logo.png" />
                 </a>
             </div>
             <div class="top-slide">
                 <a id="buttonSlide" target="_blank" href="#" style="flex: 1;">
-                    <img class="bildlogo" id="slide" name="slide1" src="logo_akrapovic.png" />
+                    <img class="bildlogo2" id="slide" name="slide1" src="logo_akrapovic.png" />
                 </a>
                 <a id="buttonSlide2" target="_blank" href="#" style="margin-left: 3%; flex: 1;">
-                    <img class="bildlogo" id="slide2" name="slide2" src="logo_arai.png" />
+                    <img class="bildlogo2" id="slide2" name="slide2" src="logo_arai.png" />
                 </a>
                 <a id="buttonSlide3" target="_blank" href="#" style="margin-left: 3%; flex: 1;">
-                    <img class="bildlogo" id="slide3" name="slide3" src="logo_derbi.png" />
+                    <img class="bildlogo2" id="slide3" name="slide3" src="logo_derbi.png" />
                 </a>
             </div>
         </div>
