@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<title>W3.CSS</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<style>
+.mySlides {display:none;}
+</style>
+<body>
+<div class="w3-content w3-section" style="max-width:300px">
+  <a id="superbrandButton1" target="_blank" href="#">
+    <img class="mySlides w3-animate-left" src="unterberger_da-hyundai_cad.jpg" style="width:100%">
+  </a>
+  <a id="superbrandButton2" target="_blank" href="#">
+    <img class="mySlides w3-animate-right" src="unterberger_da-mitsubishi_cad.jpg" style="width:100%">
+  </a>  
+</div>
+
+<script>
+  window.getUriParams = function () {
+    var queryString = {};
+    var query = window.location.search.substring(1);
+    var keyValueArray = query.split("&");
+    if (keyValueArray.length <= 0) return queryString;
+    for (var i = 0; i < keyValueArray.length; i++) {
+      var keyValue = keyValueArray[i].split("=");
+      var value = decodeURIComponent(keyValue[1]);
+      if (value != "" && keyValue[0] != "") queryString[keyValue[0]] = value;
+    }
+    return queryString;
+  };
+
+  var myIndex = 0;
+  carousel();
+
+  function carousel() {
+      var i;
+      var x = document.getElementsByClassName("mySlides");
+      for (i = 0; i < x.length; i++) {
+        x[i].style.display = "none";  
+      }
+      myIndex++;
+      if (myIndex > x.length) {myIndex = 1}    
+      x[myIndex-1].style.display = "block";  
+      setTimeout(carousel, 5500);   
+
+    getClickTag();
+  }
+
+
+  function getClickTag() {
+    // button
+    var target1 = getUriParams()["clicktag1"] || null;
+    document.getElementById('superbrandButton1').setAttribute('href', target1);
+
+    // button
+    var target2 = getUriParams()["clicktag2"] || null;
+    document.getElementById('superbrandButton2').setAttribute('href', target2);
+
+  }
+</script>
+
+</body>
+</html> 
