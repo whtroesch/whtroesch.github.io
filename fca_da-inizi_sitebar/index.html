@@ -81,13 +81,8 @@
         }    
 
         .regular2 {
-            display: -webkit-box;
-            display: -ms-flexbox;
             display: -webkit-flex;
-            display: -moz-box;
-            -webkit-flex-wrap: wrap;
-            -ms-flex-wrap: wrap;
-            flex-wrap: wrap;
+            display: flex;
             -webkit-justify-content: left;
             justify-content: left;
             height: 22%;
@@ -131,11 +126,11 @@
     <body>
         <main id="superbrand" class="superbrand-wrapper">
             <section class="regular">
-                <div style="display: flex; justify-content: center; margin-bottom: 6%;">
-                    <img src="fiatlogo.jpg" style="width:80%; height: 100%;">
+                <div style="display: flex; justify-content: center; height: 11%; margin-bottom: 6%;">
+                    <img src="fiatlogo.jpg" style="height: 100%;">
                 </div >
-                <div style="display: flex; justify-content: center; margin-bottom: -3%;">
-                    <img src="text.png" style="width:100%; height: 100%;">
+                <div style="display: flex; justify-content: center; height: 31%; margin-bottom: -3%;">
+                    <img src="text.png" style="height: 100%;">
                 </div>
                 <div style="display: flex; justify-content: center;">
                     <img onload="this.style.opacity='1';" class="car" src="car.png" style=" width:95%; height: 100%;">
