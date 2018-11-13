@@ -63,6 +63,7 @@
             -ms-flex-direction: column;
             flex-direction: column;
             margin: 0 auto;
+            max-width: 550px;
         }
 
         .regular {
@@ -73,11 +74,24 @@
             -webkit-flex-wrap: wrap;
             -ms-flex-wrap: wrap;
             flex-wrap: wrap;
-            -webkit-justify-content: space-between;
-            justify-content: space-between;
+            -webkit-justify-content: center;
+            justify-content: center;
             height: 69%;
             margin: 0 auto;
-        }       
+        }    
+
+        .regular2 {
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: -webkit-flex;
+            display: -moz-box;
+            -webkit-flex-wrap: wrap;
+            -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
+            -webkit-justify-content: left;
+            justify-content: left;
+            height: 22%;
+        }      
 
         .scaleBox {
             cursor: pointer;
@@ -92,13 +106,17 @@
         }
 
         .circle {
-            z-index: 99999;
             position: relative;
             opacity:0;
             -moz-transition: opacity 2s 2s; /* Firefox 4 */
             -webkit-transition: opacity 2s 2s; /* Safari and Chrome */
             -o-transition: opacity 2s 2s;
             transition: opacity 2s 2s;
+        }
+
+        .circle:hover {
+            transform: scale(1.05);
+            z-index: 1;
         }
 
         .car {
@@ -114,21 +132,23 @@
         <main id="superbrand" class="superbrand-wrapper">
             <section class="regular">
                 <div style="display: flex; justify-content: center; margin-bottom: 6%;">
-                    <img src="fiatlogo.jpg" style="border:0; width:20%;">
+                    <img src="fiatlogo.jpg" style="width:80%; height: 100%;">
                 </div >
                 <div style="display: flex; justify-content: center; margin-bottom: -3%;">
-                    <img src="text.png" style="border:0; width:88%;">
+                    <img src="text.png" style="width:100%; height: 100%;">
                 </div>
                 <div style="display: flex; justify-content: center;">
-                    <img onload="this.style.opacity='1';" class="car" src="car.png" style="border:0; width:95%;">
+                    <img onload="this.style.opacity='1';" class="car" src="car.png" style=" width:95%; height: 100%;">
                 </div>
                 <div style="margin-top: 8%; margin-bottom: -3%;">
                     <a id="superbrandButton1" target="_blank" href="#" style="display: flex; justify-content: center;">
-                        <img class="scaleBox" src="button.png" style="z-index: 1; border:0; width:80%;">
+                        <img class="scaleBox" src="button.png" style="z-index: 1; width:80%; height: 100%;">
                     </a>
                 </div>
+            </section>            
+            <section class="regular2">
                 <div>
-                    <img onload="this.style.opacity='1';" class="circle" src="sparen.png" style="z-index: 99999; border:0; width:30%;">
+                    <img onload="this.style.opacity='1';" class="circle" src="sparen.png" style="z-index: 99999; border:0; width:80%;">
                 </div>
             </section>    
         </main>    
