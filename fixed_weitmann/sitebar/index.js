@@ -704,7 +704,7 @@ if (loop == null) { loop = false; }	this.initialize(mode,startPosition,loop,{});
 	this.instance_1 = new lib.snow2_gif();
 	this.instance_1.parent = this;
 	this.instance_1.setTransform(249.5,730.5,1,1,0,0,0,249.5,249.5);
-	this.instance_1.alpha = 0.32;
+	this.instance_1.alpha = 0.211;
 	this.instance_1.compositeOperation = "lighter";
 
 	this.timeline.addTween(cjs.Tween.get(this.instance_1).wait(445).to({scaleY:1.13,y:698,alpha:0.141},0).wait(1));
@@ -713,7 +713,7 @@ if (loop == null) { loop = false; }	this.initialize(mode,startPosition,loop,{});
 	this.instance_2 = new lib.snow_cut_gif();
 	this.instance_2.parent = this;
 	this.instance_2.setTransform(249.5,243.8,1,1.147,0,0,0,249.5,212.5);
-	this.instance_2.alpha = 0.289;
+	this.instance_2.alpha = 0.211;
 
 	this.timeline.addTween(cjs.Tween.get(this.instance_2).wait(445).to({regY:199.5,scaleY:1.18,x:250.5,y:235.9,alpha:0.141,compositeOperation:NaN},0).wait(1));
 
@@ -819,7 +819,7 @@ lib.properties = {
 	color: "#000000",
 	opacity: 1.00,
 	manifest: [
-		{src:"images/index_atlas_.png?1542812737026", id:"index_atlas_"}
+		{src:"images/index_atlas_.png?1542812993437", id:"index_atlas_"}
 	],
 	preloads: []
 };

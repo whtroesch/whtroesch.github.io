@@ -13,6 +13,14 @@
 <meta name="authoring-tool" content="Adobe_Animate_CC">
 <title>index</title>
 <!-- write your code here -->
+<style>
+  #animation_container {
+	position:absolute;
+	margin:auto;
+	left:0;right:0;
+	top:0;bottom:0;
+  }
+</style>
 <script src="https://code.createjs.com/createjs-2015.11.26.min.js"></script>
 <script src="index.js"></script>
 <script>
@@ -21,7 +29,7 @@ function init() {
 	canvas = document.getElementById("canvas");
 	anim_container = document.getElementById("animation_container");
 	dom_overlay_container = document.getElementById("dom_overlay_container");
-	var comp=AdobeAn.getComposition("453882DB35D1BE4EB9E5BEE768CA4235");
+	var comp=AdobeAn.getComposition("A4D506AF56B5E7479AEA05FE0D771AF2");
 	var lib=comp.getLibrary();
 	var loader = new createjs.LoadQueue(false);
 	loader.addEventListener("fileload", function(evt){handleFileLoad(evt,comp)});
@@ -94,10 +102,60 @@ function handleComplete(evt,comp) {
 <!-- write your code here -->
 </head>
 <body onload="init();" style="margin:0px;">
-	<div id="animation_container" style="background-color:rgba(0, 0, 0, 1.00); width:970px; height:250px">
-		<canvas id="canvas" width="970" height="250" style="position: absolute; display: block; background-color:rgba(0, 0, 0, 1.00);"></canvas>
-		<div id="dom_overlay_container" style="pointer-events:none; overflow:hidden; width:970px; height:250px; position: absolute; left: 0px; top: 0px; display: block;">
+	<div id="animation_container" style="background-color:rgba(0, 0, 0, 1.00); width:300px; height:250px">
+		<a
+		id="superbrandButton1"
+		style="position: absolute; top:0; left:0; width:100%; height: 82%; cursor: pointer; z-index: 1000;"
+		href="#"
+		target="_blank"
+		></a>
+		<a
+		id="superbrandButton2"
+		style="position: absolute; bottom:0; left:0; width: 100%; height: 18%; cursor: pointer; z-index: 1000;"
+		href="#"
+		target="_blank"
+		></a>
+		<canvas id="canvas" width="300" height="250" style="position: absolute; display: block; background-color:rgba(0, 0, 0, 1.00);"></canvas>
+		<div id="dom_overlay_container" style="pointer-events:none; overflow:hidden; width:300px; height:250px; position: absolute; left: 0px; top: 0px; display: block;">
 		</div>
 	</div>
+	<script language="JavaScript" type="text/javascript">
+		window.getUriParams = function() {
+			var queryString = {};
+			var query = window.location.search.substring(1);
+			var keyValueArray = query.split("&");
+			if (keyValueArray.length <= 0) return queryString;
+			for (var i = 0; i < keyValueArray.length; i++) {
+			var keyValue = keyValueArray[i].split("=");
+			var value = decodeURIComponent(keyValue[1]);
+			if (value != "" && keyValue[0] != "")
+				queryString[keyValue[0]] = value;
+			}
+			return queryString;
+		};
+	
+		function jqReady() {
+			$(document).ready(function() {
+			// button
+			var target1 = getUriParams()["clicktag1"] || null;
+			if (target1 != null) $("#superbrandButton1").attr("href", target1);
+	
+			// button
+			var target2 = getUriParams()["clicktag2"] || null;
+			if (target2 != null) $("#superbrandButton2").attr("href", target2);
+			});
+		}
+		if (typeof jQuery == "undefined") {
+			var headTag = document.getElementsByTagName("head")[0];
+			var jqTag = document.createElement("script");
+			jqTag.src =
+			"https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js";
+			jqTag.onload = jqReady;
+			jqTag.type = "text/javascript";
+			headTag.appendChild(jqTag);
+		} else {
+			jqReady();
+		}
+	</script>
 </body>
 </html>
