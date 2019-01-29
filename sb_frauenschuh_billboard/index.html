@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<style>
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,400,500,700');
+
+.mySlides {
+    display: none;
+}
+
+.text {
+    font-family: 'Roboto', 'Helvetica', sans-serif;
+    color: #e3090a;
+    font-weight: 500;
+    z-index: 999;    
+    line-height: 1;
+    display: flex;
+    margin: 0% 1% 1% 1%;
+}
+
+article {
+    height: 100%;
+}
+.scaleBox {
+    opacity: 1;
+}
+
+.scaleBox:hover {
+    opacity: 0.8;
+}
+</style>
+<body>
+<div style="max-width:970px; max-height:250px;">
+    <section class="text">
+        <span style="font-size: 200%; width: 79%;">UNSERE ANGEBOTE</span>
+        <div style="justify-content: flex-end;width: 19%">
+        <img src="logo.jpg" style="right:0; width:100%;">
+        </div>
+    </section>
+    <section class="mySlides w3-animate-right" style="width:970px; height:207px;">
+        <article>
+            <a class="scaleBox" id="superbrandButton1" style="position: absolute; left: 5%; cursor: pointer;" href="#" target="_blank">
+                <img src="a1.jpg" style="width:100%;">
+            </a>
+            <a class="scaleBox" id="superbrandButton2" style="position: absolute; left: 36%; cursor: pointer;" href="#" target="_blank">
+                <img src="a2.jpg" style="width:100%;">
+            </a>
+            <a class="scaleBox" id="superbrandButton3" style="position: absolute; left: 66%; cursor: pointer;" href="#" target="_blank">
+                <img src="a3.jpg" style="width:100%;">
+            </a>
+        </article>
+    </section>
+    <section class="mySlides w3-animate-right" style="width:970px; height:207px;">
+        <article>
+            <a class="scaleBox" id="superbrandButton4" style="position: absolute; left: 5%; cursor: pointer;" href="#" target="_blank">
+                <img src="a4.jpg" style="width:100%;">
+            </a>
+            <a class="scaleBox" id="superbrandButton5" style="position: absolute; left: 36%; cursor: pointer;" href="#" target="_blank">
+                <img src="a5.jpg" style="width:100%;">
+            </a>
+            <a class="scaleBox" id="superbrandButton6" style="position: absolute; left: 66%; cursor: pointer;" href="#" target="_blank">
+                <img src="a6.jpg" style="width:100%;">
+            </a>
+        </article>
+    </section>
+</div>
+
+<script language="JavaScript" type="text/javascript">  
+    var config = {
+        items: null,
+        itemIndex: 0,
+        pageDelay: 10000,
+        perPage: null,
+        redirect: null
+    };
+
+    function dynamicResize() {
+        var availableHeight = $(window).innerHeight();
+        var availableWidth = $(window).innerWidth();
+
+        // minimum
+        var targetHeight = 600;
+        var targetWidth = 300;
+
+        // adapt
+        if (availableHeight > 599 && availableWidth > 299) {
+            if ((availableWidth / availableHeight * 2) < 1) {
+                var targetHeight = availableWidth * 2;
+                var targetWidth = availableWidth;
+            } else {
+                var targetHeight = availableHeight
+                var targetWidth = availableHeight / 2;
+            }
+        }
+
+        // maximum
+        if (availableHeight > 1200 && availableWidth > 600) {
+            var targetHeight = 1200;
+            var targetWidth = 600;
+        }
+
+        $("#superbrand").css({
+            "height": targetHeight,
+            "width": targetWidth
+        });
+    }
+
+    function jqReady() {
+        $(document).ready(function() {
+            dynamicResize();
+            window.setInterval(dynamicResize, 250);
+
+            // button
+            var target1 = getUriParams()["clicktag1"] || null;
+            if (target1 != null) $("#superbrandButton1").attr("href", target1);
+
+            // button
+            var target2 = getUriParams()["clicktag2"] || null;
+            if (target2 != null) $("#superbrandButton2").attr("href", target2);
+
+            // button
+            var target3 = getUriParams()["clicktag3"] || null;
+            if (target3 != null) $("#superbrandButton3").attr("href", target3);
+            
+            // button
+            var target4 = getUriParams()["clicktag4"] || null;
+            if (target4 != null) $("#superbrandButton4").attr("href", target4);
+
+            // button
+            var target5 = getUriParams()["clicktag5"] || null;
+            if (target5 != null) $("#superbrandButton5").attr("href", target5);
+
+            // button
+            var target6 = getUriParams()["clicktag6"] || null;
+            if (target6 != null) $("#superbrandButton6").attr("href", target6);
+            
+            // redirect
+            config.redirect = getUriParams()["feed"] || null;
+
+            preloading(0);
+        });
+    }     
+
+
+    window.getUriParams = function() {
+        var queryString = {};
+        var query = window.location.search.substring(1);
+        var keyValueArray = query.split("&");
+        if (keyValueArray.length <= 0) return queryString;
+        for (var i = 0; i < keyValueArray.length; i++) {
+            var keyValue = keyValueArray[i].split("=");
+            var value = decodeURIComponent(keyValue[1]);
+            if (value != "" && keyValue[0] != "") queryString[keyValue[0]] = value;
+        }
+        return queryString;
+    };
+
+    if (typeof jQuery == "undefined") {
+        var headTag = document.getElementsByTagName("head")[0];
+        var jqTag = document.createElement("script");
+        jqTag.src = "https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js";
+        jqTag.onload = jqReady;
+        jqTag.type = "text/javascript";
+        headTag.appendChild(jqTag);
+    } else {
+        jqReady();
+    }
+        
+
+    var myIndex = 0;
+    carousel();
+
+    function carousel() {
+    var i;
+    var x = document.getElementsByClassName("mySlides");
+    for (i = 0; i < x.length; i++) {
+        x[i].style.display = "none";  
+    }
+    myIndex++;
+    if (myIndex > x.length) {myIndex = 1}    
+    x[myIndex-1].style.display = "block";  
+    setTimeout(carousel, 7500);    
+    }
+
+</script>
+
+</body>
+</html>
