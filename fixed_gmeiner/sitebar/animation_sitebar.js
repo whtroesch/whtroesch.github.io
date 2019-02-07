@@ -9,16 +9,16 @@ lib.ssMetadata = [];
 
 
 
-(lib.banner = function() {
-	this.initialize(img.banner);
-}).prototype = p = new cjs.Bitmap();
-p.nominalBounds = new cjs.Rectangle(0,0,600,980);
-
-
 (lib.button = function() {
 	this.initialize(img.button);
 }).prototype = p = new cjs.Bitmap();
-p.nominalBounds = new cjs.Rectangle(0,0,361,67);
+p.nominalBounds = new cjs.Rectangle(0,0,358,67);
+
+
+(lib.gmeiner_da_sitebar = function() {
+	this.initialize(img.gmeiner_da_sitebar);
+}).prototype = p = new cjs.Bitmap();
+p.nominalBounds = new cjs.Rectangle(0,0,600,980);
 
 
 (lib.lichtnissan = function() {
@@ -27,7 +27,7 @@ p.nominalBounds = new cjs.Rectangle(0,0,361,67);
 p.nominalBounds = new cjs.Rectangle(0,0,187,187);
 
 
-(lib.banner_1 = function(mode,startPosition,loop) {
+(lib.banner = function(mode,startPosition,loop) {
 if (loop == null) { loop = false; }	this.initialize(mode,startPosition,loop,{});
 
 	// Ebene_1
@@ -35,7 +35,7 @@ if (loop == null) { loop = false; }	this.initialize(mode,startPosition,loop,{});
 	this.instance.parent = this;
 	this.instance.setTransform(130,651,0.939,0.939);
 
-	this.instance_1 = new lib.banner();
+	this.instance_1 = new lib.gmeiner_da_sitebar();
 	this.instance_1.parent = this;
 
 	this.instance_2 = new lib.lichtnissan();
@@ -53,14 +53,14 @@ p.nominalBounds = new cjs.Rectangle(0,0,600,980);
 
 
 // stage content:
-(lib.index = function(mode,startPosition,loop) {
+(lib.animation_sitebar = function(mode,startPosition,loop) {
 if (loop == null) { loop = false; }	this.initialize(mode,startPosition,loop,{});
 
 	// banner
-	this.instance = new lib.banner_1();
+	this.instance = new lib.banner();
 	this.instance.parent = this;
 	this.instance.setTransform(300,490,1,1,0,0,0,300,490);
-	new cjs.ButtonHelper(this.instance, 0, 1, 2, false, new lib.banner_1(), 3);
+	new cjs.ButtonHelper(this.instance, 0, 1, 2, false, new lib.banner(), 3);
 
 	this.timeline.addTween(cjs.Tween.get(this.instance).wait(1));
 
@@ -75,8 +75,8 @@ lib.properties = {
 	color: "#22A841",
 	opacity: 0.00,
 	manifest: [
-		{src:"images/banner.jpg", id:"banner"},
 		{src:"images/button.png", id:"button"},
+		{src:"images/gmeiner_da_sitebar.jpg", id:"gmeiner_da_sitebar"},
 		{src:"images/lichtnissan.png", id:"lichtnissan"}
 	],
 	preloads: []

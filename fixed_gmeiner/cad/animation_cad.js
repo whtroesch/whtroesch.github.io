@@ -12,7 +12,7 @@ lib.ssMetadata = [];
 (lib.button = function() {
 	this.initialize(img.button);
 }).prototype = p = new cjs.Bitmap();
-p.nominalBounds = new cjs.Rectangle(0,0,361,67);
+p.nominalBounds = new cjs.Rectangle(0,0,358,67);
 
 
 (lib.gmeiner_da_cad = function() {

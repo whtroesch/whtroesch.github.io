@@ -12,7 +12,7 @@ lib.ssMetadata = [];
 (lib.button = function() {
 	this.initialize(img.button);
 }).prototype = p = new cjs.Bitmap();
-p.nominalBounds = new cjs.Rectangle(0,0,361,67);
+p.nominalBounds = new cjs.Rectangle(0,0,358,67);
 
 
 (lib.gmeiner_da_billboard = function() {
@@ -33,20 +33,20 @@ p.nominalBounds = new cjs.Rectangle(0,0,187,187);
 	// Ebene_1
 	this.instance = new lib.button();
 	this.instance.parent = this;
-	this.instance.setTransform(654,154,0.666,0.666);
+	this.instance.setTransform(312,156,0.666,0.666);
 
 	this.instance_1 = new lib.gmeiner_da_billboard();
 	this.instance_1.parent = this;
 
 	this.instance_2 = new lib.lichtnissan();
 	this.instance_2.parent = this;
-	this.instance_2.setTransform(559,129.5,0.121,0.123,0,0,-9.1);
+	this.instance_2.setTransform(217.8,129.8,0.121,0.123,0,0,-9.1);
 
 	this.instance_3 = new lib.lichtnissan();
 	this.instance_3.parent = this;
-	this.instance_3.setTransform(405,119,0.261,0.261);
+	this.instance_3.setTransform(65,119,0.261,0.261);
 
-	this.timeline.addTween(cjs.Tween.get({}).to({state:[{t:this.instance_1},{t:this.instance,p:{scaleX:0.666,scaleY:0.666}}]}).to({state:[{t:this.instance_1},{t:this.instance,p:{scaleX:0.7,scaleY:0.7}},{t:this.instance_3},{t:this.instance_2}]},1).to({state:[{t:this.instance_1},{t:this.instance,p:{scaleX:0.7,scaleY:0.7}},{t:this.instance_3},{t:this.instance_2}]},1).to({state:[{t:this.instance_1},{t:this.instance,p:{scaleX:0.7,scaleY:0.7}},{t:this.instance_3},{t:this.instance_2}]},1).wait(1));
+	this.timeline.addTween(cjs.Tween.get({}).to({state:[{t:this.instance_1},{t:this.instance,p:{scaleX:0.666,scaleY:0.666,x:312}}]}).to({state:[{t:this.instance_1},{t:this.instance,p:{scaleX:0.7,scaleY:0.7,x:307}},{t:this.instance_3},{t:this.instance_2}]},1).to({state:[{t:this.instance_1},{t:this.instance,p:{scaleX:0.7,scaleY:0.7,x:307}},{t:this.instance_3},{t:this.instance_2}]},1).to({state:[{t:this.instance_1},{t:this.instance,p:{scaleX:0.7,scaleY:0.7,x:307}},{t:this.instance_3},{t:this.instance_2}]},1).wait(1));
 
 }).prototype = p = new cjs.MovieClip();
 p.nominalBounds = new cjs.Rectangle(0,0,970,250);
