@@ -1,0 +1,276 @@
+<!doctype html>
+<html>
+	<head>
+        <meta content="text/html; charset=utf-8" http-equiv="content-type"/>
+        <script language="JavaScript" type="text/javascript">
+
+
+            
+            var clicktag = "";
+			var clicktag2 = "";
+            var clicktag3 = "";
+        
+			var jsonFeed = "http://cdn-willhaben.adverserve.net/motor_json/19823620.json";
+			//var jsonFeed = "data.json";
+
+
+        </script>
+        <style type="text/css">
+            * { box-sizing:border-box; margin:0; padding:0; }
+            html { height:100%; width:100%; }
+            body { color:#000000; font-family:Arial,Helvetica,sans-serif; font-size:100%; height:100%; width:100%; }
+            .itemBox { background-color:rgba(255, 255, 255, 1); border: 1px solid #e0e0e0; background-position:center center; background-repeat:no-repeat; background-size:cover; height:100%; opacity:0; position:absolute; width:100%; }
+            .itemPrice { background-color:white; opacity: 0.9; color:#DF2037; font-weight:bold; padding:2px 4px; right:0; bottom:5%; position:absolute;}
+            .itemTitle {background-color:#fff; top:0; color:#67717D; font-size:75%; font-weight:bold; left:0; padding:2px 4px; position:absolute; width:100%; }
+            .scaleBox { cursor:pointer; transform:scale(1); transition:transform 0.125s linear; }
+            .scaleBox:hover { transform:scale(1.05); }
+            .shadowBox { border:0; box-shadow:0 0 10px rgba(0, 0, 0, 0.5); transition:box-shadow 0.125s linear; }
+            .shadowBox:hover { box-shadow:0 0 10px #ffffff; }
+            #smdFSBImage {border:0px solid red; display:block; width:100%; height:100%; z-index:100; }
+        </style>
+        <title>smdFSB</title>
+	</head>
+	<body>
+        <div id="smdFSB" style="background-position:center center; background-repeat:no-repeat; background-size:100% 100%;height:1000px; position:relative; width:500px;">
+        	<div style=" background-color:transparent;  background-image:url(marken.jpg); background-size:100% 100%; bottom:1%; height:35%; left:0%; position:absolute; width:100%;">
+                <a id="smdFSBImage" target="_blank"></a>
+            </div>
+			
+			
+            <div style="height:18%; left:2%; position:absolute; top:1%; width:47%;">
+                <a target="_top"><div class="itemBox scaleBox" id="ib0"><div class="itemPrice"></div><div class="itemTitle"></div></div></a>
+            </div>
+            <div style="height:18%; position:absolute; right:2%; top:1%; width:47%;">
+                <a target="_top"><div class="itemBox scaleBox" id="ib1"><div class="itemPrice"></div><div class="itemTitle"></div></div></a>
+            </div>
+
+            <div style="height:18%; left:2%; position:absolute; top:20%; width:47%;">
+                <a target="_top"><div class="itemBox scaleBox" id="ib2"><div class="itemPrice"></div><div class="itemTitle"></div></div></a>
+            </div>
+            <div style="height:18%; position:absolute; right:2%; top:20%; width:47%;">
+                <a target="_top"><div class="itemBox scaleBox" id="ib3"><div class="itemPrice"></div><div class="itemTitle"></div></div></a>
+            </div>
+
+            <div style="height:18%; left:2%; position:absolute; top:39%; width:47%;">
+                <a target="_top"><div class="itemBox scaleBox" id="ib4"><div class="itemPrice"></div><div class="itemTitle"></div></div></a>
+            </div>
+            <div style="height:18%; position:absolute; right:2%; top:39%; width:47%;">
+                <a target="_top"><div class="itemBox scaleBox" id="ib5"><div class="itemPrice"></div><div class="itemTitle"></div></div></a>
+            </div>
+
+            <div style="bottom:36.5%; left:4%; position:absolute; width:45%;">
+                <a id="smdFSBButton" style="cursor:pointer;" target="_top"><img class="shadowBox" src="shopbutton.png" style="border:0; width:100%;"/></a>
+            </div>
+			<div style="bottom:36.5%; right:4%; position:absolute; width:45%;">
+                <a id="smdFSBButton2" style="cursor:pointer;" target="_top"><img class="shadowBox" src="shopbutton2.png" style="border:0; width:100%;"/></a>
+            </div>
+        </div>
+        <script language="JavaScript" type="text/javascript">
+        
+
+            var config = {
+                items:null,
+                itemIndex:0,
+                pageDelay:10000,
+                perPage:null,
+                redirect:null
+            };
+
+            var preloadingFiles = [];
+            var preloadingImages = [];
+
+            function arrayShuffle(array) {
+                var currentIndex = array.length, temporaryValue, randomIndex;
+
+                while(currentIndex !== 0) {
+                    // pick a remaining element
+                    randomIndex = Math.floor(Math.random() * currentIndex);
+                    currentIndex--;
+
+                    // swap
+                    temporaryValue = array[currentIndex];
+                    array[currentIndex] = array[randomIndex];
+                    array[randomIndex] = temporaryValue;
+                }
+
+                return array;
+            }
+
+            function arrayTrim(array) {
+                var surplus = array.length % config.perPage;
+
+                if(surplus > 0) {
+                    for(var i = 0; i < surplus; i++) {
+                        array.pop();
+                    }
+                }
+
+                return array;
+            }
+
+            function cropTitle(title) {
+                if(title.length > 64) {
+                    title = title.substr(0, 63).trim() + "&hellip;";
+                }
+
+                return title;
+            }
+
+            function dynamicResize() {
+                var availableHeight = $(window).innerHeight();
+                var availableWidth = $(window).innerWidth();
+
+                // minimum
+                var targetHeight = 600;
+                var targetWidth = 300;
+
+                // adapt
+                if(availableHeight > 599 && availableWidth > 299) {
+                    if((availableWidth / availableHeight * 2) < 1) {
+                        var targetHeight = availableWidth * 2;
+                        var targetWidth = availableWidth;
+                    } else {
+                        var targetHeight = availableHeight
+                        var targetWidth = availableHeight / 2;
+                    }
+                }
+
+                // maximum
+                if(availableHeight > 1200 && availableWidth > 600) {
+                    var targetHeight = 1200;
+                    var targetWidth = 600;
+                }
+
+                $("#smdFSB").css({ "height":targetHeight, "width":targetWidth });
+            }
+
+            function jqReady() {
+                $(document).ready(function() {
+                    dynamicResize();
+                    window.setInterval(dynamicResize, 250);
+
+                    // button
+                    var target = getUriParams()["clicktag"] || window["clicktag"] || null;
+                    if(target != null) $("#smdFSBButton").attr("href", target);
+					
+					 // button2
+                    var target = getUriParams()["clicktag2"] || window["clicktag2"] || null;
+                    if(target != null) $("#smdFSBButton2").attr("href", target);
+					
+                     // Hintergrundbild
+                    var target = getUriParams()["clicktag3"] || window["clicktag3"] || null;
+                    if(target != null) $("#smdFSBImage").attr("href", target);
+
+                    // redirect
+                    config.redirect = getUriParams()["feed"] || null;
+
+                    preloading(0);
+                });
+            }
+
+            function preloading(index) {
+                if(index >= preloadingFiles.length) {  
+                    dynamicResize();
+                    window.setInterval(dynamicResize, 250);
+
+                    config.perPage = $(".itemBox").length;
+
+                    var jsonUrl = getUriParams()["jsonFeed"] || window["jsonFeed"] || null;
+                    if(jsonUrl != null) {
+                        $.getJSON(jsonUrl, { "shopId":config.shopId }, function(data) {
+                            config.items = arrayTrim(arrayShuffle(data.items));
+                            shopCycle();
+                        });
+                    }
+                } else {
+                    preloadingImages[index] = new Image();
+                    preloadingImages[index].src = preloadingFiles[index];
+                    preloadingImages[index].onload = function() {
+                        preloading(++index);
+                    }
+                }
+            }
+
+            function shopCycle() {
+                for(var i = 0; i < config.perPage; i++) {
+                    $("#ib" + i).animate({ "opacity":0 }, 125);
+
+                    var image = new Image();
+                    image.src = config.items[config.itemIndex].image;
+
+                    $("#ib" + i).addClass(((image.height > image.width) ? "itemBoxVertical" : "itemBoxHorizontal"));
+                    $("#ib" + i).removeClass(((image.height > image.width) ? "itemBoxHorizontal" : "itemBoxVertical"));
+                    $("#ib" + i).css({ "background-image":"url(" + image.src + ")" });
+                    if(config.redirect !== null) {
+                        $("#ib" + i).parent().attr("href", config.redirect + encodeURIComponent(config.items[config.itemIndex].target));
+                    } else {
+                        $("#ib" + i).parent().attr("href", config.items[config.itemIndex].target);
+                    }
+
+                    var price = config.items[config.itemIndex].price;
+                    if(price % 1 === 0) $("#ib" + i).find(".itemPrice").html("&euro; " + config.items[config.itemIndex].price);
+                    else $("#ib" + i).find(".itemPrice").html("&euro; " + config.items[config.itemIndex].price.toFixed(2).replace(".", ","));
+
+					/// PREIS MIT 1000TRENNUNG (1.000.-)
+						function addCommas(nStr) {
+							nStr += '';
+							x = nStr.split('.');
+							x1 = x[0];
+							x2 = x.length > 1 ? ',' + x[1] : '';
+							var rgx = /(\d+)(\d{3})/;
+							while (rgx.test(x1)) {
+									x1 = x1.replace(rgx, '$1' + '.' + '$2');
+							}
+							return x1 + x2;
+						}
+						$("#ib" + i).find(".itemPrice").html("&euro; " +addCommas(config.items[config.itemIndex].price));
+						/// PREIS END
+					
+                    $("#ib" + i).find(".itemTitle").html(cropTitle(config.items[config.itemIndex].title));
+
+                    config.itemIndex++;
+
+                    if(config.itemIndex >= config.items.length) {
+                        config.itemIndex = 0;
+                    }
+
+                    $("#ib" + i).delay(i * 125).animate({ "opacity":1 }, 125);
+                }
+                window.setTimeout(shopFadeout, config.pageDelay);
+            }
+
+            function shopFadeout() {
+                for(var i = 0; i < config.perPage; i++) {
+                    $("#ib" + i).delay(i * 125).animate({ "opacity":0 }, 125);
+                }
+                window.setTimeout(shopCycle, config.perPage * 125);
+            }
+
+            window.getUriParams = function() {
+                var queryString = {};
+                var query = window.location.search.substring(1);
+                var keyValueArray = query.split("&");
+                if(keyValueArray.length <= 0) return queryString;
+                for(var i = 0; i < keyValueArray.length; i++) {
+                    var keyValue = keyValueArray[i].split("=");
+                    var value = decodeURIComponent(keyValue[1]);
+                    if(value != "" && keyValue[0] != "") queryString[keyValue[0]] = value;
+                }
+                return queryString;
+            };
+
+            if(typeof jQuery == "undefined") {
+                var headTag = document.getElementsByTagName("head")[0];
+                var jqTag = document.createElement("script");
+                jqTag.src = "https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js";
+                jqTag.onload = jqReady;
+                jqTag.type = "text/javascript";
+                headTag.appendChild(jqTag);
+            } else {
+                 jqReady();
+            }
+
+        //-->
+        </script>
+	</body>
+</html>
