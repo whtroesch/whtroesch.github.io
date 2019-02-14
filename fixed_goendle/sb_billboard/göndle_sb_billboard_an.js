@@ -33,12 +33,6 @@ p.nominalBounds = new cjs.Rectangle(0,0,970,250);
 p.nominalBounds = new cjs.Rectangle(0,0,970,250);
 
 
-(lib.nicht = function() {
-	this.initialize(img.nicht);
-}).prototype = p = new cjs.Bitmap();
-p.nominalBounds = new cjs.Rectangle(0,0,970,250);
-
-
 (lib.text = function() {
 	this.initialize(img.text);
 }).prototype = p = new cjs.Bitmap();
@@ -59,18 +53,6 @@ function getMCSymbolPrototype(symbol, nominalBounds, frameBounds) {
 	prototype.frameBounds = frameBounds;
 	return prototype;
 	}
-
-
-(lib.Symbol5 = function(mode,startPosition,loop) {
-	this.initialize(mode,startPosition,loop,{});
-
-	// Ebene_1
-	this.instance = new lib.nicht();
-	this.instance.parent = this;
-
-	this.timeline.addTween(cjs.Tween.get(this.instance).wait(1));
-
-}).prototype = getMCSymbolPrototype(lib.Symbol5, new cjs.Rectangle(0,0,970,250), null);
 
 
 (lib.Symbol4 = function(mode,startPosition,loop) {
@@ -167,33 +149,24 @@ if (loop == null) { loop = false; }	this.initialize(mode,startPosition,loop,{});
 
 	this.timeline.addTween(cjs.Tween.get(this.instance_2).wait(63).to({_off:false},0).wait(1).to({alpha:0.031},0).wait(1).to({alpha:0.063},0).wait(1).to({alpha:0.094},0).wait(1).to({alpha:0.125},0).wait(1).to({alpha:0.156},0).wait(1).to({alpha:0.188},0).wait(1).to({alpha:0.219},0).wait(1).to({alpha:0.25},0).wait(1).to({alpha:0.281},0).wait(1).to({alpha:0.313},0).wait(1).to({alpha:0.344},0).wait(1).to({alpha:0.375},0).wait(1).to({alpha:0.406},0).wait(1).to({alpha:0.438},0).wait(1).to({alpha:0.469},0).wait(1).to({alpha:0.5},0).wait(1).to({alpha:0.531},0).wait(1).to({alpha:0.563},0).wait(1).to({alpha:0.594},0).wait(1).to({alpha:0.625},0).wait(1).to({alpha:0.656},0).wait(1).to({alpha:0.688},0).wait(1).to({alpha:0.719},0).wait(1).to({alpha:0.75},0).wait(1).to({alpha:0.781},0).wait(1).to({alpha:0.813},0).wait(1).to({alpha:0.844},0).wait(1).to({alpha:0.875},0).wait(1).to({alpha:0.906},0).wait(1).to({alpha:0.938},0).wait(1).to({alpha:0.969},0).wait(1).to({alpha:1},0).wait(31));
 
-	// nicht
-	this.instance_3 = new lib.Symbol5();
+	// muffel
+	this.instance_3 = new lib.Symbol3();
 	this.instance_3.parent = this;
 	this.instance_3.setTransform(485,125,1,1,0,0,0,485,125);
 	this.instance_3.alpha = 0;
 	this.instance_3._off = true;
 
-	this.timeline.addTween(cjs.Tween.get(this.instance_3).wait(39).to({_off:false},0).wait(1).to({alpha:0.043},0).wait(1).to({alpha:0.087},0).wait(1).to({alpha:0.13},0).wait(1).to({alpha:0.174},0).wait(1).to({alpha:0.217},0).wait(1).to({alpha:0.261},0).wait(1).to({alpha:0.304},0).wait(1).to({alpha:0.348},0).wait(1).to({alpha:0.391},0).wait(1).to({alpha:0.435},0).wait(1).to({alpha:0.478},0).wait(1).to({alpha:0.522},0).wait(1).to({alpha:0.565},0).wait(1).to({alpha:0.609},0).wait(1).to({alpha:0.652},0).wait(1).to({alpha:0.696},0).wait(1).to({alpha:0.739},0).wait(1).to({alpha:0.783},0).wait(1).to({alpha:0.826},0).wait(1).to({alpha:0.87},0).wait(1).to({alpha:0.913},0).wait(1).to({alpha:0.957},0).wait(1).to({alpha:1},0).wait(64));
-
-	// muffel
-	this.instance_4 = new lib.Symbol3();
-	this.instance_4.parent = this;
-	this.instance_4.setTransform(485,125,1,1,0,0,0,485,125);
-	this.instance_4.alpha = 0;
-	this.instance_4._off = true;
-
-	this.timeline.addTween(cjs.Tween.get(this.instance_4).wait(2).to({_off:false},0).wait(1).to({alpha:0.05},0).wait(1).to({alpha:0.1},0).wait(1).to({alpha:0.15},0).wait(1).to({alpha:0.2},0).wait(1).to({alpha:0.25},0).wait(1).to({alpha:0.3},0).wait(1).to({alpha:0.35},0).wait(1).to({alpha:0.4},0).wait(1).to({alpha:0.45},0).wait(1).to({alpha:0.5},0).wait(1).to({alpha:0.55},0).wait(1).to({alpha:0.6},0).wait(1).to({alpha:0.65},0).wait(1).to({alpha:0.7},0).wait(1).to({alpha:0.75},0).wait(1).to({alpha:0.8},0).wait(1).to({alpha:0.85},0).wait(1).to({alpha:0.9},0).wait(1).to({alpha:0.95},0).wait(1).to({alpha:1},0).wait(104));
+	this.timeline.addTween(cjs.Tween.get(this.instance_3).wait(11).to({_off:false},0).wait(1).to({alpha:0.053},0).wait(1).to({alpha:0.105},0).wait(1).to({alpha:0.158},0).wait(1).to({alpha:0.211},0).wait(1).to({alpha:0.263},0).wait(1).to({alpha:0.316},0).wait(1).to({alpha:0.368},0).wait(1).to({alpha:0.421},0).wait(1).to({alpha:0.474},0).wait(1).to({alpha:0.526},0).wait(1).to({alpha:0.579},0).wait(1).to({alpha:0.632},0).wait(1).to({alpha:0.684},0).wait(1).to({alpha:0.737},0).wait(1).to({alpha:0.789},0).wait(1).to({alpha:0.842},0).wait(1).to({alpha:0.895},0).wait(1).to({alpha:0.947},0).wait(1).to({alpha:1},0).wait(96));
 
 	// Ebene_6
-	this.instance_5 = new lib.Symbol1();
-	this.instance_5.parent = this;
-	this.instance_5.setTransform(483.3,115.9,0.486,0.486,0,0,0,998.5,739.6);
+	this.instance_4 = new lib.Symbol1();
+	this.instance_4.parent = this;
+	this.instance_4.setTransform(483.3,115.9,0.486,0.486,0,0,0,998.3,739.4);
 
-	this.timeline.addTween(cjs.Tween.get(this.instance_5).wait(1).to({regX:1000,regY:741,scaleX:0.49,scaleY:0.49,x:484.1,y:116.6},0).wait(125));
+	this.timeline.addTween(cjs.Tween.get(this.instance_4).wait(1).to({regX:1000,regY:741,scaleX:0.49,scaleY:0.49,x:484.2,y:116.7},0).wait(125));
 
 }).prototype = p = new cjs.MovieClip();
-p.nominalBounds = new cjs.Rectangle(482.5,-119,973,721);
+p.nominalBounds = new cjs.Rectangle(482.6,-118.9,973,721);
 // library properties:
 lib.properties = {
 	id: 'C85BA38B5DEAC945B5011F404DC7D8C1',
@@ -207,7 +180,6 @@ lib.properties = {
 		{src:"images/button.jpg", id:"button"},
 		{src:"images/logo.png", id:"logo"},
 		{src:"images/muffel.png", id:"muffel"},
-		{src:"images/nicht.png", id:"nicht"},
 		{src:"images/text.png", id:"text"}
 	],
 	preloads: []

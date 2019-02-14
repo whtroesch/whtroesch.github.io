@@ -28,7 +28,7 @@
 		}
 		return query_string;
 	}();
-</script>	
+</script>
 <script>
 var canvas, stage, exportRoot, anim_container, dom_overlay_container, fnStartAnimation;
 function init() {
@@ -101,7 +101,7 @@ function handleComplete(evt,comp) {
 			stage.tickOnUpdate = true;		
 		}
 	}
-	makeResponsive(false,'both',false,1);	
+	makeResponsive(true,'both',false,1);	
 	AdobeAn.compositionLoaded(lib.properties.id);
 	fnStartAnimation();
 }
