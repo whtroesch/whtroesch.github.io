@@ -136,7 +136,7 @@ p.nominalBounds = new cjs.Rectangle(-121,-24,243.1,48.4);
 
 
 // stage content:
-(lib.birngruber_da_cad = function(mode,startPosition,loop) {
+(lib.index = function(mode,startPosition,loop) {
 if (loop == null) { loop = false; }	this.initialize(mode,startPosition,loop,{});
 
 	// button
@@ -198,12 +198,12 @@ lib.properties = {
 	color: "#FFFFFF",
 	opacity: 0.00,
 	manifest: [
-		{src:"images/button.png?1551349149887", id:"button"},
-		{src:"images/s1.jpg?1551349149887", id:"s1"},
-		{src:"images/s2.jpg?1551349149887", id:"s2"},
-		{src:"images/s3.jpg?1551349149887", id:"s3"},
-		{src:"images/s4.jpg?1551349149887", id:"s4"},
-		{src:"images/s5.jpg?1551349149887", id:"s5"}
+		{src:"images/button.png", id:"button"},
+		{src:"images/s1.jpg", id:"s1"},
+		{src:"images/s2.jpg", id:"s2"},
+		{src:"images/s3.jpg", id:"s3"},
+		{src:"images/s4.jpg", id:"s4"},
+		{src:"images/s5.jpg", id:"s5"}
 	],
 	preloads: []
 };
