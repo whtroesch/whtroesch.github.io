@@ -3,7 +3,7 @@
 var p; // shortcut to reference prototypes
 var lib={};var ss={};var img={};
 lib.ssMetadata = [
-		{name:"frauenschuh_native_ad_re_atlas_", frames: [[1052,202,524,200],[526,0,524,200],[1052,606,524,200],[0,808,524,200],[0,0,524,200],[0,1212,524,200],[526,1818,524,200],[526,1010,524,200],[0,1414,524,200],[526,808,524,200],[1052,1212,524,200],[1052,1414,524,200],[526,404,524,200],[1052,1818,524,200],[526,1212,524,200],[1052,1010,524,200],[0,1616,524,200],[0,1010,524,200],[1052,1616,524,200],[526,1414,524,200],[0,1818,524,200],[526,1616,524,200],[1052,808,524,200],[526,202,524,200],[1052,0,524,200],[1052,404,524,200],[0,202,524,200],[0,404,524,200],[0,606,524,200],[526,606,524,200]]}
+		{name:"index_atlas_", frames: [[0,202,524,200],[1052,0,524,200],[526,202,524,200],[1052,404,524,200],[526,0,524,200],[0,404,524,200],[1052,202,524,200],[526,404,524,200],[0,606,524,200],[526,606,524,200],[1052,606,524,200],[0,808,524,200],[0,1010,524,200],[0,1212,524,200],[0,0,524,200],[526,808,524,200],[1052,1818,524,200],[1052,808,524,200],[526,1010,524,200],[526,1414,524,200],[1052,1616,524,200],[526,1616,524,200],[1052,1010,524,200],[526,1818,524,200],[0,1818,524,200],[1052,1414,524,200],[0,1414,524,200],[526,1212,524,200],[1052,1212,524,200],[0,1616,524,200]]}
 ];
 
 
@@ -12,210 +12,210 @@ lib.ssMetadata = [
 
 
 (lib.frauenschuh_nativead_mobile_0 = function() {
-	this.spriteSheet = ss["frauenschuh_native_ad_re_atlas_"];
+	this.spriteSheet = ss["index_atlas_"];
 	this.gotoAndStop(0);
 }).prototype = p = new cjs.Sprite();
 
 
 
 (lib.frauenschuh_nativead_mobile_1 = function() {
-	this.spriteSheet = ss["frauenschuh_native_ad_re_atlas_"];
+	this.spriteSheet = ss["index_atlas_"];
 	this.gotoAndStop(1);
 }).prototype = p = new cjs.Sprite();
 
 
 
 (lib.frauenschuh_nativead_mobile_10 = function() {
-	this.spriteSheet = ss["frauenschuh_native_ad_re_atlas_"];
+	this.spriteSheet = ss["index_atlas_"];
 	this.gotoAndStop(2);
 }).prototype = p = new cjs.Sprite();
 
 
 
 (lib.frauenschuh_nativead_mobile_11 = function() {
-	this.spriteSheet = ss["frauenschuh_native_ad_re_atlas_"];
+	this.spriteSheet = ss["index_atlas_"];
 	this.gotoAndStop(3);
 }).prototype = p = new cjs.Sprite();
 
 
 
 (lib.frauenschuh_nativead_mobile_12 = function() {
-	this.spriteSheet = ss["frauenschuh_native_ad_re_atlas_"];
+	this.spriteSheet = ss["index_atlas_"];
 	this.gotoAndStop(4);
 }).prototype = p = new cjs.Sprite();
 
 
 
 (lib.frauenschuh_nativead_mobile_13 = function() {
-	this.spriteSheet = ss["frauenschuh_native_ad_re_atlas_"];
+	this.spriteSheet = ss["index_atlas_"];
 	this.gotoAndStop(5);
 }).prototype = p = new cjs.Sprite();
 
 
 
 (lib.frauenschuh_nativead_mobile_14 = function() {
-	this.spriteSheet = ss["frauenschuh_native_ad_re_atlas_"];
+	this.spriteSheet = ss["index_atlas_"];
 	this.gotoAndStop(6);
 }).prototype = p = new cjs.Sprite();
 
 
 
 (lib.frauenschuh_nativead_mobile_15 = function() {
-	this.spriteSheet = ss["frauenschuh_native_ad_re_atlas_"];
+	this.spriteSheet = ss["index_atlas_"];
 	this.gotoAndStop(7);
 }).prototype = p = new cjs.Sprite();
 
 
 
 (lib.frauenschuh_nativead_mobile_16 = function() {
-	this.spriteSheet = ss["frauenschuh_native_ad_re_atlas_"];
+	this.spriteSheet = ss["index_atlas_"];
 	this.gotoAndStop(8);
 }).prototype = p = new cjs.Sprite();
 
 
 
 (lib.frauenschuh_nativead_mobile_17 = function() {
-	this.spriteSheet = ss["frauenschuh_native_ad_re_atlas_"];
+	this.spriteSheet = ss["index_atlas_"];
 	this.gotoAndStop(9);
 }).prototype = p = new cjs.Sprite();
 
 
 
 (lib.frauenschuh_nativead_mobile_18 = function() {
-	this.spriteSheet = ss["frauenschuh_native_ad_re_atlas_"];
+	this.spriteSheet = ss["index_atlas_"];
 	this.gotoAndStop(10);
 }).prototype = p = new cjs.Sprite();
 
 
 
 (lib.frauenschuh_nativead_mobile_19 = function() {
-	this.spriteSheet = ss["frauenschuh_native_ad_re_atlas_"];
+	this.spriteSheet = ss["index_atlas_"];
 	this.gotoAndStop(11);
 }).prototype = p = new cjs.Sprite();
 
 
 
 (lib.frauenschuh_nativead_mobile_2 = function() {
-	this.spriteSheet = ss["frauenschuh_native_ad_re_atlas_"];
+	this.spriteSheet = ss["index_atlas_"];
 	this.gotoAndStop(12);
 }).prototype = p = new cjs.Sprite();
 
 
 
 (lib.frauenschuh_nativead_mobile_20 = function() {
-	this.spriteSheet = ss["frauenschuh_native_ad_re_atlas_"];
+	this.spriteSheet = ss["index_atlas_"];
 	this.gotoAndStop(13);
 }).prototype = p = new cjs.Sprite();
 
 
 
 (lib.frauenschuh_nativead_mobile_21 = function() {
-	this.spriteSheet = ss["frauenschuh_native_ad_re_atlas_"];
+	this.spriteSheet = ss["index_atlas_"];
 	this.gotoAndStop(14);
 }).prototype = p = new cjs.Sprite();
 
 
 
 (lib.frauenschuh_nativead_mobile_22 = function() {
-	this.spriteSheet = ss["frauenschuh_native_ad_re_atlas_"];
+	this.spriteSheet = ss["index_atlas_"];
 	this.gotoAndStop(15);
 }).prototype = p = new cjs.Sprite();
 
 
 
 (lib.frauenschuh_nativead_mobile_23 = function() {
-	this.spriteSheet = ss["frauenschuh_native_ad_re_atlas_"];
+	this.spriteSheet = ss["index_atlas_"];
 	this.gotoAndStop(16);
 }).prototype = p = new cjs.Sprite();
 
 
 
 (lib.frauenschuh_nativead_mobile_24 = function() {
-	this.spriteSheet = ss["frauenschuh_native_ad_re_atlas_"];
+	this.spriteSheet = ss["index_atlas_"];
 	this.gotoAndStop(17);
 }).prototype = p = new cjs.Sprite();
 
 
 
 (lib.frauenschuh_nativead_mobile_25 = function() {
-	this.spriteSheet = ss["frauenschuh_native_ad_re_atlas_"];
+	this.spriteSheet = ss["index_atlas_"];
 	this.gotoAndStop(18);
 }).prototype = p = new cjs.Sprite();
 
 
 
 (lib.frauenschuh_nativead_mobile_26 = function() {
-	this.spriteSheet = ss["frauenschuh_native_ad_re_atlas_"];
+	this.spriteSheet = ss["index_atlas_"];
 	this.gotoAndStop(19);
 }).prototype = p = new cjs.Sprite();
 
 
 
 (lib.frauenschuh_nativead_mobile_27 = function() {
-	this.spriteSheet = ss["frauenschuh_native_ad_re_atlas_"];
+	this.spriteSheet = ss["index_atlas_"];
 	this.gotoAndStop(20);
 }).prototype = p = new cjs.Sprite();
 
 
 
 (lib.frauenschuh_nativead_mobile_28 = function() {
-	this.spriteSheet = ss["frauenschuh_native_ad_re_atlas_"];
+	this.spriteSheet = ss["index_atlas_"];
 	this.gotoAndStop(21);
 }).prototype = p = new cjs.Sprite();
 
 
 
 (lib.frauenschuh_nativead_mobile_29 = function() {
-	this.spriteSheet = ss["frauenschuh_native_ad_re_atlas_"];
+	this.spriteSheet = ss["index_atlas_"];
 	this.gotoAndStop(22);
 }).prototype = p = new cjs.Sprite();
 
 
 
 (lib.frauenschuh_nativead_mobile_3 = function() {
-	this.spriteSheet = ss["frauenschuh_native_ad_re_atlas_"];
+	this.spriteSheet = ss["index_atlas_"];
 	this.gotoAndStop(23);
 }).prototype = p = new cjs.Sprite();
 
 
 
 (lib.frauenschuh_nativead_mobile_4 = function() {
-	this.spriteSheet = ss["frauenschuh_native_ad_re_atlas_"];
+	this.spriteSheet = ss["index_atlas_"];
 	this.gotoAndStop(24);
 }).prototype = p = new cjs.Sprite();
 
 
 
 (lib.frauenschuh_nativead_mobile_5 = function() {
-	this.spriteSheet = ss["frauenschuh_native_ad_re_atlas_"];
+	this.spriteSheet = ss["index_atlas_"];
 	this.gotoAndStop(25);
 }).prototype = p = new cjs.Sprite();
 
 
 
 (lib.frauenschuh_nativead_mobile_6 = function() {
-	this.spriteSheet = ss["frauenschuh_native_ad_re_atlas_"];
+	this.spriteSheet = ss["index_atlas_"];
 	this.gotoAndStop(26);
 }).prototype = p = new cjs.Sprite();
 
 
 
 (lib.frauenschuh_nativead_mobile_7 = function() {
-	this.spriteSheet = ss["frauenschuh_native_ad_re_atlas_"];
+	this.spriteSheet = ss["index_atlas_"];
 	this.gotoAndStop(27);
 }).prototype = p = new cjs.Sprite();
 
 
 
 (lib.frauenschuh_nativead_mobile_8 = function() {
-	this.spriteSheet = ss["frauenschuh_native_ad_re_atlas_"];
+	this.spriteSheet = ss["index_atlas_"];
 	this.gotoAndStop(28);
 }).prototype = p = new cjs.Sprite();
 
 
 
 (lib.frauenschuh_nativead_mobile_9 = function() {
-	this.spriteSheet = ss["frauenschuh_native_ad_re_atlas_"];
+	this.spriteSheet = ss["index_atlas_"];
 	this.gotoAndStop(29);
 }).prototype = p = new cjs.Sprite();
 
@@ -322,7 +322,7 @@ p.nominalBounds = new cjs.Rectangle(0,0,524,200);
 
 
 // stage content:
-(lib.frauenschuh_nativead_re = function(mode,startPosition,loop) {
+(lib.index = function(mode,startPosition,loop) {
 	this.initialize(mode,startPosition,loop,{});
 
 	// Ebene_1
@@ -343,7 +343,7 @@ lib.properties = {
 	color: "#FFFFFF",
 	opacity: 0.00,
 	manifest: [
-		{src:"images/frauenschuh_native_ad_re_atlas_.png", id:"frauenschuh_native_ad_re_atlas_"}
+		{src:"images/index_atlas_.png", id:"index_atlas_"}
 	],
 	preloads: []
 };

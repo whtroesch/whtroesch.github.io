@@ -11,10 +11,10 @@
 <head>
 <meta charset="UTF-8">
 <meta name="authoring-tool" content="Adobe_Animate_CC">
-<title>frauenschuh_native-ad_re</title>
+<title>index</title>
 <!-- write your code here -->
 <script src="https://code.createjs.com/createjs-2015.11.26.min.js"></script>
-<script src="frauenschuh_native-ad_re.js"></script>
+<script src="index.js"></script>
 <script>
 	var getUriParams = function() {
 		var query_string = {}
@@ -28,7 +28,8 @@
 		}
 		return query_string;
 	}();
-</script>
+	</script>
+
 <script>
 var canvas, stage, exportRoot, anim_container, dom_overlay_container, fnStartAnimation;
 function init() {
@@ -56,7 +57,7 @@ function handleComplete(evt,comp) {
 	for(i=0; i<ssMetadata.length; i++) {
 		ss[ssMetadata[i].name] = new createjs.SpriteSheet( {"images": [queue.getResult(ssMetadata[i].name)], "frames": ssMetadata[i].frames} )
 	}
-	exportRoot = new lib.frauenschuh_nativead_re();
+	exportRoot = new lib.index();
 	stage = new lib.Stage(canvas);	
 	//Registers the "tick" event listener.
 	fnStartAnimation = function() {
@@ -115,8 +116,8 @@ function handleComplete(evt,comp) {
 			</div>
 		</div>
 	</a>
-<script>
-	document.getElementById('IAB_clicktag').setAttribute('href', getUriParams.clicktag);
-</script>
+	<script>
+		document.getElementById('IAB_clicktag').setAttribute('href', getUriParams.clicktag);
+	</script>
 </body>
 </html>
