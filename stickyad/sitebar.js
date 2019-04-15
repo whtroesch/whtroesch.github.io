@@ -171,7 +171,7 @@
     );
     this.txt_comp2_wert.name = "txt_comp2_wert";
     this.txt_comp2_wert.textAlign = "center";
-    this.txt_comp2_wert.lineHeight = 150;
+    this.txt_comp2_wert.lineHeight = 250;
     this.txt_comp2_wert.lineWidth = 500;
     this.txt_comp2_wert.parent = this;
     this.txt_comp2_wert.setTransform(105.55, 20.5);
