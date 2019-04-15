@@ -170,8 +170,8 @@
       "#CA2631"
     );
     this.txt_comp2_wert.name = "txt_comp2_wert";
-    this.txt_comp2_wert.textBaseline = "middle";
     this.txt_comp2_wert.textAlign = "center";
+    this.txt_comp2_wert.lineHeight = 150;
     this.txt_comp2_wert.lineWidth = 500;
     this.txt_comp2_wert.parent = this;
     this.txt_comp2_wert.setTransform(105.55, 20.5);
@@ -227,8 +227,8 @@
       "#CA2631"
     );
     this.txt_comp1_wert.name = "txt_comp1_wert";
-    this.txt_comp1_wert.textBaseline = "middle";
     this.txt_comp1_wert.textAlign = "center";
+    this.txt_comp1_wert.lineHeight = 93;
     this.txt_comp1_wert.lineWidth = 500;
     this.txt_comp1_wert.parent = this;
     this.txt_comp1_wert.setTransform(105.55, 20.5);
