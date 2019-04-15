@@ -127,7 +127,7 @@
     this.txt_cta.name = "txt_cta";
 	  this.txt_cta.textBaseline = "middle";
     this.txt_cta.textAlign = "center";
-    this.txt_cta.lineHeight = 28;
+    this.txt_cta.lineHeight = 20;
 	  this.txt_cta.lineWidth = 272;
     this.txt_cta.parent = this;
     this.txt_cta.setTransform(137.8, 30);
