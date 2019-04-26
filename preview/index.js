@@ -9,22 +9,34 @@ lib.ssMetadata = [];
 
 
 
+(lib.birngruber_dacarwoom_bg = function() {
+	this.initialize(img.birngruber_dacarwoom_bg);
+}).prototype = p = new cjs.Bitmap();
+p.nominalBounds = new cjs.Rectangle(0,0,1072,1080);
+
+
+(lib.button = function() {
+	this.initialize(img.button);
+}).prototype = p = new cjs.Bitmap();
+p.nominalBounds = new cjs.Rectangle(0,0,304,276);
+
+
 (lib.carwoom = function() {
 	this.initialize(img.carwoom);
 }).prototype = p = new cjs.Bitmap();
 p.nominalBounds = new cjs.Rectangle(0,0,659,472);
 
 
-(lib.Hintergrund20 = function() {
-	this.initialize(img.Hintergrund20);
+(lib.mai = function() {
+	this.initialize(img.mai);
 }).prototype = p = new cjs.Bitmap();
-p.nominalBounds = new cjs.Rectangle(0,0,2835,2481);
+p.nominalBounds = new cjs.Rectangle(0,0,672,250);
 
 
-(lib.schrift = function() {
-	this.initialize(img.schrift);
+(lib.schriftpngKopie = function() {
+	this.initialize(img.schriftpngKopie);
 }).prototype = p = new cjs.Bitmap();
-p.nominalBounds = new cjs.Rectangle(0,0,449,134);
+p.nominalBounds = new cjs.Rectangle(0,0,970,90);
 
 
 (lib.superheroes = function() {
@@ -49,16 +61,42 @@ function getMCSymbolPrototype(symbol, nominalBounds, frameBounds) {
 	}
 
 
-(lib.Symbol3 = function(mode,startPosition,loop) {
+(lib.Symbol6 = function(mode,startPosition,loop) {
 	this.initialize(mode,startPosition,loop,{});
 
 	// Ebene_1
-	this.instance = new lib.schrift();
+	this.instance = new lib.button();
 	this.instance.parent = this;
 
 	this.timeline.addTween(cjs.Tween.get(this.instance).wait(1));
 
-}).prototype = getMCSymbolPrototype(lib.Symbol3, new cjs.Rectangle(0,0,449,134), null);
+}).prototype = getMCSymbolPrototype(lib.Symbol6, new cjs.Rectangle(0,0,304,276), null);
+
+
+(lib.Symbol5 = function(mode,startPosition,loop) {
+	this.initialize(mode,startPosition,loop,{});
+
+	// Ebene_1
+	this.instance = new lib.mai();
+	this.instance.parent = this;
+	this.instance.setTransform(0,0,0.712,0.712);
+
+	this.timeline.addTween(cjs.Tween.get(this.instance).wait(1));
+
+}).prototype = getMCSymbolPrototype(lib.Symbol5, new cjs.Rectangle(0,0,478.5,178), null);
+
+
+(lib.Symbol4 = function(mode,startPosition,loop) {
+	this.initialize(mode,startPosition,loop,{});
+
+	// Ebene_1
+	this.instance = new lib.schriftpngKopie();
+	this.instance.parent = this;
+	this.instance.setTransform(0,0,0.641,0.641);
+
+	this.timeline.addTween(cjs.Tween.get(this.instance).wait(1));
+
+}).prototype = getMCSymbolPrototype(lib.Symbol4, new cjs.Rectangle(0,0,622.1,57.7), null);
 
 
 (lib.Symbol2 = function(mode,startPosition,loop) {
@@ -92,47 +130,68 @@ if (loop == null) { loop = false; }	this.initialize(mode,startPosition,loop,{});
 	// carwoom
 	this.instance = new lib.Symbol2();
 	this.instance.parent = this;
-	this.instance.setTransform(301.1,602.1,0.118,0.118,0,0,0,329.3,235.3);
+	this.instance.setTransform(551.1,602.1,0.118,0.118,0,0,0,329.3,235.3);
 	this.instance._off = true;
 
-	this.timeline.addTween(cjs.Tween.get(this.instance).wait(14).to({_off:false},0).wait(1).to({regX:329.5,regY:236,scaleX:0.19,scaleY:0.19,y:602.2},0).wait(1).to({scaleX:0.26,scaleY:0.26,y:602.3},0).wait(1).to({scaleX:0.34,scaleY:0.34},0).wait(1).to({scaleX:0.41,scaleY:0.41,y:602.4},0).wait(1).to({scaleX:0.48,scaleY:0.48,x:301.2},0).wait(1).to({scaleX:0.55,scaleY:0.55,y:602.5},0).wait(1).to({scaleX:0.63,scaleY:0.63},0).wait(1).to({scaleX:0.7,scaleY:0.7,y:602.6},0).wait(1).to({scaleX:0.77,scaleY:0.77,x:301.1},0).wait(1).to({scaleX:0.84,scaleY:0.84,x:301.2,y:602.7},0).wait(24));
+	this.timeline.addTween(cjs.Tween.get(this.instance).wait(14).to({_off:false},0).wait(1).to({regX:329.5,regY:236,scaleX:0.19,scaleY:0.19,y:602.2},0).wait(1).to({scaleX:0.26,scaleY:0.26,y:602.3},0).wait(1).to({scaleX:0.34,scaleY:0.34},0).wait(1).to({scaleX:0.41,scaleY:0.41,y:602.4},0).wait(1).to({scaleX:0.48,scaleY:0.48,x:551.2},0).wait(1).to({scaleX:0.55,scaleY:0.55,y:602.5},0).wait(1).to({scaleX:0.63,scaleY:0.63},0).wait(1).to({scaleX:0.7,scaleY:0.7,y:602.6},0).wait(1).to({scaleX:0.77,scaleY:0.77,x:551.1},0).wait(1).to({scaleX:0.84,scaleY:0.84,x:551.2,y:602.7},0).wait(24));
 
 	// helden
 	this.instance_1 = new lib.Symbol1();
 	this.instance_1.parent = this;
-	this.instance_1.setTransform(300,1296.5,1,1,0,0,0,300,226.5);
+	this.instance_1.setTransform(550,1296.5,1,1,0,0,0,300,226.5);
 
 	this.timeline.addTween(cjs.Tween.get(this.instance_1).wait(1).to({y:1235},0).wait(1).to({y:1173.6},0).wait(1).to({y:1112.1},0).wait(1).to({y:1050.6},0).wait(1).to({y:989.1},0).wait(1).to({y:927.7},0).wait(1).to({y:866.2},0).wait(1).to({y:804.7},0).wait(1).to({y:743.3},0).wait(1).to({y:681.8},0).wait(1).to({y:620.3},0).wait(1).to({y:558.8},0).wait(1).to({y:497.4},0).wait(1).to({y:435.9},0).wait(34));
 
-	// text
-	this.instance_2 = new lib.Symbol3();
+	// datum
+	this.instance_2 = new lib.Symbol5();
 	this.instance_2.parent = this;
-	this.instance_2.setTransform(16.9,177.7,0.035,0.234,0,0,0,269.9,80);
+	this.instance_2.setTransform(552.2,1002,1,1,0,0,0,239.2,89);
+	this.instance_2.alpha = 0;
 	this.instance_2._off = true;
 
-	this.timeline.addTween(cjs.Tween.get(this.instance_2).wait(24).to({_off:false},0).wait(1).to({regX:224.5,regY:67,scaleX:0.09,scaleY:0.28,x:27.7,y:174},0).wait(1).to({scaleX:0.14,scaleY:0.32,x:40.2,y:173.4},0).wait(1).to({scaleX:0.19,scaleY:0.37,x:52.6,y:172.9},0).wait(1).to({scaleX:0.24,scaleY:0.41,x:65,y:172.3},0).wait(1).to({scaleX:0.3,scaleY:0.45,x:77.5,y:171.7},0).wait(1).to({scaleX:0.35,scaleY:0.5,x:89.9,y:171.1},0).wait(1).to({scaleX:0.4,scaleY:0.54,x:102.3,y:170.6},0).wait(1).to({scaleX:0.45,scaleY:0.58,x:114.8,y:170},0).wait(1).to({scaleX:0.51,scaleY:0.63,x:127.2,y:169.4},0).wait(1).to({scaleX:0.56,scaleY:0.67,x:139.6,y:168.9},0).wait(1).to({scaleX:0.61,scaleY:0.71,x:152.1,y:168.3},0).wait(1).to({scaleX:0.66,scaleY:0.76,x:164.5,y:167.7},0).wait(1).to({scaleX:0.72,scaleY:0.8,x:176.9,y:167.1},0).wait(1).to({scaleX:0.77,scaleY:0.85,x:189.4,y:166.6},0).wait(1).to({scaleX:0.82,scaleY:0.89,x:201.8,y:166},0).wait(1).to({scaleX:0.87,scaleY:0.93,x:214.2,y:165.4},0).wait(1).to({scaleX:0.93,scaleY:0.98,x:226.7,y:164.8},0).wait(1).to({scaleX:0.98,scaleY:1.02,x:239.1,y:164.2},0).wait(1).to({scaleX:1.03,scaleY:1.06,x:251.5,y:163.7},0).wait(1).to({scaleX:1.08,scaleY:1.11,x:264,y:163.1},0).wait(1).to({scaleX:1.13,scaleY:1.15,x:276.4,y:162.5},0).wait(1).to({scaleX:1.19,scaleY:1.2,x:288.9,y:161.9},0).wait(1).to({scaleX:1.24,scaleY:1.24,x:301.3,y:161.4},0).wait(1));
+	this.timeline.addTween(cjs.Tween.get(this.instance_2).wait(27).to({_off:false},0).wait(1).to({alpha:0.167},0).wait(1).to({alpha:0.333},0).wait(1).to({alpha:0.5},0).wait(1).to({alpha:0.667},0).wait(1).to({alpha:0.833},0).wait(1).to({alpha:1},0).wait(15));
+
+	// button
+	this.instance_3 = new lib.Symbol6();
+	this.instance_3.parent = this;
+	this.instance_3.setTransform(601,832,1,1,0,0,0,152,138);
+	this.instance_3.alpha = 0;
+	this.instance_3._off = true;
+
+	this.timeline.addTween(cjs.Tween.get(this.instance_3).wait(27).to({_off:false},0).wait(1).to({alpha:0.167},0).wait(1).to({alpha:0.333},0).wait(1).to({alpha:0.5},0).wait(1).to({alpha:0.667},0).wait(1).to({alpha:0.833},0).wait(1).to({alpha:1},0).wait(15));
+
+	// gwtage
+	this.instance_4 = new lib.Symbol4();
+	this.instance_4.parent = this;
+	this.instance_4.setTransform(554.1,209.9,1,1,0,0,0,311.1,28.9);
+	this.instance_4.alpha = 0;
+	this.instance_4._off = true;
+
+	this.timeline.addTween(cjs.Tween.get(this.instance_4).wait(27).to({_off:false},0).wait(1).to({regX:311,x:554,alpha:0.167},0).wait(1).to({alpha:0.333},0).wait(1).to({alpha:0.5},0).wait(1).to({alpha:0.667},0).wait(1).to({alpha:0.833},0).wait(1).to({alpha:1},0).wait(15));
 
 	// bg
-	this.instance_3 = new lib.Hintergrund20();
-	this.instance_3.parent = this;
-	this.instance_3.setTransform(-337,-25,0.457,0.457);
+	this.instance_5 = new lib.birngruber_dacarwoom_bg();
+	this.instance_5.parent = this;
+	this.instance_5.setTransform(-10,-8,1.037,1.037);
 
-	this.timeline.addTween(cjs.Tween.get(this.instance_3).wait(48));
+	this.timeline.addTween(cjs.Tween.get(this.instance_5).wait(48));
 
 }).prototype = p = new cjs.MovieClip();
-p.nominalBounds = new cjs.Rectangle(-37,525,1295.1,1548);
+p.nominalBounds = new cjs.Rectangle(540,542,1111.7,1531);
 // library properties:
 lib.properties = {
 	id: '6C8B2E369FBFED47B414510077FAC7FC',
-	width: 600,
+	width: 1100,
 	height: 1100,
 	fps: 24,
 	color: "#FFFFFF",
 	opacity: 0.00,
 	manifest: [
+		{src:"images/birngruber_dacarwoom_bg.jpg", id:"birngruber_dacarwoom_bg"},
+		{src:"images/button.png", id:"button"},
 		{src:"images/carwoom.png", id:"carwoom"},
-		{src:"images/Hintergrund20.jpg", id:"Hintergrund20"},
-		{src:"images/schrift.png", id:"schrift"},
+		{src:"images/mai.png", id:"mai"},
+		{src:"images/schriftpngKopie.png", id:"schriftpngKopie"},
 		{src:"images/superheroes.png", id:"superheroes"}
 	],
 	preloads: []
