@@ -56,8 +56,8 @@
             -webkit-flex-wrap: wrap;
             -ms-flex-wrap: wrap;
             flex-wrap: wrap;
-            -webkit-justify-content: space-between;
-            justify-content: space-between;
+            -webkit-justify-content: space-evenly;
+            justify-content: space-evenly;
             height: 40%;
             padding: 0% 2% 0% 2%;
         }
@@ -82,7 +82,7 @@
             color: #033587;
             font-weight: bold;
             right: 0;
-            bottom: 0;
+            bottom: -4px;
             position: absolute;
             font-size: 1.8vh;
         }
@@ -127,7 +127,7 @@
         }
 
         .gewährl{
-            bottom: 5px;
+            bottom: -5px;
             left: 0;
             position: absolute;
         }
@@ -236,8 +236,8 @@
         }
 
         function cropTitle(title) {
-            if (title.length > 26) {
-                title = title.substr(0, 25).trim() + "&hellip;";
+            if (title.length > 24) {
+                title = title.substr(0, 23).trim() + "&hellip;";
             }
 
             return title;
