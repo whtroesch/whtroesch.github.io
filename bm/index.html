@@ -71,8 +71,8 @@
             background-color: #f4f4f4;
             background-position: center center;
             background-repeat: no-repeat;
-            background-size: cover;
-            border: 2px solid #5A4C69;
+            background-size: contain;
+            border: 4px solid #212121;
             height: 100%;
             opacity: 0;
             width: 100%;
@@ -80,15 +80,15 @@
         
         .itemPrice {
             background-color: #212121;
-            border-bottom: px solid #5A4C69;
-            border-left: 1px solid #5A4C69;
             color: #ffffff;
             font-weight: 700;
             padding: 2px 4px;
             right: 0;
             top: 0;
             position: absolute;
-            font-size: 1.6vh;
+            font-size: 2vh;
+            width: 100%;
+            text-align: right;
         }
         
         .itemTitle {
@@ -259,8 +259,8 @@
         }
 
         function cropTitle(title) {
-            if (title.length > 64) {
-                title = title.substr(0, 63).trim() + "&hellip;";
+            if (title.length > 54) {
+                title = title.substr(0, 53).trim() + "&hellip;";
             }
 
             return title;
@@ -307,13 +307,9 @@
                 if (target1 != null) $("#superbrandButton1").attr("href", target1);
 
                 // button
-                var target2 = getUriParams()["clicktag1"] || null;
-                if (target2 != null) $("#superbrandButton1").attr("href", target1);
-
-                // button
-                var target3 = getUriParams()["clicktag1"] || null;
-                if (target1 != null) $("#superbrandButton1").attr("href", target1);
-                
+                var target2 = getUriParams()["clicktag2"] || null;
+                if (target2 != null) $("#superbrandButton2").attr("href", target2);
+               
                 // redirect
                 config.redirect = getUriParams()["feed"] || null;
 
@@ -367,8 +363,10 @@
                 }
 
                 var price = config.items[config.itemIndex].price;
-                if (price % 1 === 0) $("#ib" + i).find(".itemPrice").html("&euro; " + config.items[config.itemIndex].price);
-                else $("#ib" + i).find(".itemPrice").html("&euro; " + config.items[config.itemIndex].price.toFixed(2).replace(".", ","));
+                var formatedPrice = formatThousandsNoRounding(Number(price));
+
+                if (price % 1 === 0) $("#ib" + i).find(".itemPrice").html("&euro; " + formatedPrice);
+                else $("#ib" + i).find(".itemPrice").html("&euro; " + formatedPrice);
 
                 $("#ib" + i).find(".itemTitle").html(cropTitle(config.items[config.itemIndex].title));
 
@@ -384,6 +382,17 @@
             }
             window.setTimeout(shopFadeout, config.pageDelay);
         }
+
+        var formatThousandsNoRounding = function(n, dp){
+            var e = '', s = e+n, l = s.length, b = n < 0 ? 1 : 0,
+            i = s.lastIndexOf('.'), j = i == -1 ? l : i,
+            r = e, d = s.substr(j+1, dp);
+            while ( (j-=3) > b ) { r = '.' + s.substr(j, 3) + r; }
+            return s.substr(0, j + 3) + r + 
+                (dp ? ',' + d + ( d.length < dp ? 
+                    ('00000').substr(0, dp - d.length):e):e + ',-');
+        };
+
 
         function shopFadeout() {
             for (var i = 0; i < config.perPage; i++) {
