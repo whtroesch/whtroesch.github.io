@@ -1,0 +1,147 @@
+
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    height: 100%;
+    width: 100%;
+}
+
+body {
+    color: #ffffff;
+    font-family: 'Open Sans', Helvetica, sans-serif;
+    font-size: 100%;
+    height: 100%;
+    width: 100%;
+    background-image: url(bg.jpg);
+    background-repeat: no-repeat;
+    background-position: bottom center;
+    background-size: cover;
+    resize: both;
+}
+
+.superbrand-wrapper {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: flex;
+    -webkit-box-direction: normal;
+    -moz-box-direction: normal;
+    -webkit-box-orient: vertical;
+    -moz-box-orient: vertical;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    padding: 1% 2% 14% 2%;
+    margin:0 auto;
+}
+
+.productAtz {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: flex;
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-justify-content: space-between;
+    justify-content: space-between;
+    height: 82%;
+    margin-bottom: 4%;
+    padding: 3.5% 2% 2% 2%; 
+    background-color: #fff;
+}
+
+.productAtz article {
+    height: 27%;
+    width: 49%;
+    padding-bottom: 10px;
+    
+}
+
+.itemBox {
+    opacity: 0;
+    height: 100%;
+    width: 100%;
+    background-color: #1b1464;
+    background-position: top center;
+    background-repeat: no-repeat;
+    background-size: cover;   
+}
+
+.itemPrice {
+    padding: 3px 5px;
+    position: absolute;
+    bottom: 6px;
+    left: 0;
+    background-color: #1b1464;
+    color: #ffffff;
+    font-size: 1.7vh;
+    font-weight: 500;   
+}
+
+.itemTitle {
+    width: 100%;
+    padding: 1px 1px;
+    position: absolute;
+    bottom: -32px;
+    left: 0;
+    background-color: #f2f2f2;
+    color: #1b1464;
+    font-size: 1.2vh;
+    font-weight: 700;
+    height: 25%;
+    text-transform: uppercase;
+}
+
+.scaleBox {
+    cursor: pointer;
+    transform: scale(1);
+    transition: transform 0.125s linear;
+}
+
+.scaleBox:hover {
+    transform: scale(1.05);
+}
+
+.shadowBox {
+    border: 0;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    transition: box-shadow 0.125s linear;
+}
+
+.shadowBox:hover {
+    box-shadow: 0 0 10px #ffffff;
+}
+
+.opacBox {
+    opacity: 1;
+}
+
+.opacBox:hover {
+    opacity: 0.8;
+}
+
+.bottom {
+    height: 8%;
+}
+
+.button {
+	border: none;
+	display: inline-block;
+	cursor: pointer;
+	padding: 10px 20px;
+    background-color: #1b1464;
+    font-weight: 300;
+	color: #fff;
+	text-align: center;
+	text-decoration: none;
+    font-size: 3vh;
+}
