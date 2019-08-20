@@ -1,5 +1,5 @@
 //var jsonFeed = "data.json";
-var jsonFeed = "https://cdn-willhaben.adverserve.net/motor_json/27733391.json";
+var jsonFeed = "https://cdn-willhaben.adverserve.net/motor_json/<ORGID>.json";
 
 var config = {
     items: null,
@@ -89,10 +89,6 @@ function jqReady() {
         // button
         var target1 = getUriParams()["clicktag1"] || null;
         if (target1 != null) $("#superbrandButton1").attr("href", target1);
-
-        // button
-        var target2 = getUriParams()["clicktag2"] || null;
-        if (target2 != null) $("#superbrandButton2").attr("href", target2);
 
         // redirect
         config.redirect = getUriParams()["feed"] || null;
