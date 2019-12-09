@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title></title>
+		<style>
+			body {
+			    margin: 0;
+			}
+			canvas {
+			    width: 100%;
+			    height: 100%;
+			    position: absolute;
+			    top: 0;
+			    left: 0;
+			}
+			#wrapper-3d {
+			    position: absolute;
+			    width: 100%;
+			    height: 100%;
+			    left: 0;
+			    top: 0;
+			}
+		</style>
+	</head>
+	<body>
+        <div id="wrapper-3d" class="wrapper"></div>
+
+		<script src="https://ajax.googleapis.com/ajax/libs/threejs/r84/three.min.js"></script>
+		<script src="https://s0.2mdn.net/ads/studio/cached_libs/gsap_3.0.1_min.js"></script>
+		<script>
+			//three.js setup
+			let wrapper = document.getElementById('wrapper-3d'),
+			    scene = new THREE.Scene(),
+			    camera = new THREE.PerspectiveCamera(50, wrapper.offsetWidth/wrapper.offsetHeight, 0.1, 1000),
+			    renderer = new THREE.WebGLRenderer({alpha: true}),
+			    manager = new THREE.LoadingManager();
+
+			renderer.setSize(wrapper.offsetWidth, wrapper.offsetHeight);
+			renderer.setPixelRatio(window.devicePixelRatio ? window.devicePixelRatio : 1);
+			wrapper.appendChild(renderer.domElement);
+			camera.position.z = 8;
+
+			//geometry setup
+			let sphereSegmentCount = 40,
+			    geo_sphere = new THREE.SphereGeometry(1, sphereSegmentCount, sphereSegmentCount/2),
+			    geo_cylinder = new THREE.CylinderGeometry(.05, .05, 6, 9);
+
+			geo_sphere.computeFlatVertexNormals();
+
+            //material setup
+            let envMap =  new THREE.CubeTextureLoader(manager).load(['wall3.png', 'wall2.png', 'top.png', 'bottom.png', 'wall2.png', 'wall2.png']), //left, right, top, bottom, front, back
+                texture = new THREE.TextureLoader(manager).load('bump.png'),
+                mat_mirrorBall = new THREE.MeshStandardMaterial({
+                    color: 0xffffff,
+                    metalness: .9,
+                    roughness: 0,
+                    envMap: envMap,
+                    bumpMap: texture,
+                    //map: texture,
+                    bumpScale: 0.02,
+                }),
+                mat_chrome = new THREE.MeshStandardMaterial({
+                    color: 0xffffff,
+                    metalness: 0.8,
+                    roughness: 0,
+                    envMap: envMap,
+                }),
+                spriteMap = new THREE.TextureLoader().load( 'lensflare.png' ),
+                spriteMaterial = new THREE.SpriteMaterial( { map: spriteMap, color: 0xffffff } );
+
+            //mesh setup
+            let mirrorBallSphere = new THREE.Mesh(geo_sphere, mat_mirrorBall),
+        	    mirrorBallBar = new THREE.Mesh(geo_cylinder, mat_chrome),
+        	    grp_mirrorBall = new THREE.Group(),
+            	sprite = new THREE.Sprite( spriteMaterial );
+
+            sprite.scale.set(4, 4, 1);
+            sprite.position.set(.1,.01,1);
+
+            mirrorBallBar.position.set(0, 2, 0);
+
+            grp_mirrorBall.add(mirrorBallSphere);
+            grp_mirrorBall.add(mirrorBallBar);
+            grp_mirrorBall.add(sprite);
+
+            grp_mirrorBall.position.set(0, 0, 0);
+
+            scene.add(grp_mirrorBall);
+
+            //lighting setup
+            let light = new THREE.PointLight( 0xffffff, 3, 100 );
+
+            light.position.set(3, 5, 3);
+            scene.add(light);
+
+            //render loop
+			let animate = function() {
+				requestAnimationFrame(animate);
+				renderer.render(scene, camera);
+			};
+
+			animate();
+
+			//GSAP animation
+			let tl = gsap.timeline(),
+				mirrorBallRotationSpeed = 20;
+
+			gsap.set('#flare', {transformOrigin: '61% 39%'});
+
+			tl
+			.to(grp_mirrorBall.children[0].rotation, {y: 2 * Math.PI, duration: mirrorBallRotationSpeed, repeat: -1, ease: Power0.easeNone}, 0)
+			.to(spriteMaterial, {keyframes: [{opacity: 0.8, duration: mirrorBallRotationSpeed/sphereSegmentCount/2, ease: Power2.easeIn}, {opacity: 1, duration: 1/4}], repeat: -1, ease: Power2.easeOut}, 0)
+		</script>
+	</body>
+</html>
