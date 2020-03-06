@@ -3,7 +3,7 @@
 var p; // shortcut to reference prototypes
 var lib={};var ss={};var img={};
 lib.ssMetadata = [
-		{name:"index_atlas_", frames: [[493,0,300,250],[493,315,415,88],[0,0,491,260],[0,262,773,51],[0,405,570,51],[0,315,491,80]]}
+		{name:"index_atlas_", frames: [[0,144,300,250],[302,236,415,88],[0,0,969,142],[0,396,773,51],[302,326,570,51],[302,144,625,90]]}
 ];
 
 
@@ -94,7 +94,7 @@ function getMCSymbolPrototype(symbol, nominalBounds, frameBounds) {
 
 	this._renderFirstFrame();
 
-}).prototype = getMCSymbolPrototype(lib.Symbol3, new cjs.Rectangle(0,0,231.8,37.8), null);
+}).prototype = getMCSymbolPrototype(lib.Symbol3, new cjs.Rectangle(0,0,295.1,42.5), null);
 
 
 (lib.Symbol2 = function(mode,startPosition,loop) {
@@ -131,7 +131,7 @@ if (loop == null) { loop = false; }	this.initialize(mode,startPosition,loop,{});
 
 	// button
 	this.instance = new lib.Symbol4();
-	this.instance.setTransform(112.9,223,1,1,0,0,0,84.9,18);
+	this.instance.setTransform(105.9,197,1,1,0,0,0,84.9,18);
 	this.instance.alpha = 0;
 	this.instance._off = true;
 
@@ -139,15 +139,15 @@ if (loop == null) { loop = false; }	this.initialize(mode,startPosition,loop,{});
 
 	// vorteil
 	this.instance_1 = new lib.Symbol3();
-	this.instance_1.setTransform(143.9,174.9,1,1,0,0,0,115.9,18.9);
+	this.instance_1.setTransform(122.05,142.9,0.8719,0.8717,0,0,0,115.9,18.7);
 	this.instance_1.alpha = 0;
 	this.instance_1._off = true;
 
-	this.timeline.addTween(cjs.Tween.get(this.instance_1).wait(78).to({_off:false},0).wait(1).to({alpha:0.0714},0).wait(1).to({alpha:0.1429},0).wait(1).to({alpha:0.2143},0).wait(1).to({alpha:0.2857},0).wait(1).to({alpha:0.3571},0).wait(1).to({alpha:0.4286},0).wait(1).to({alpha:0.5},0).wait(1).to({alpha:0.5714},0).wait(1).to({alpha:0.6429},0).wait(1).to({alpha:0.7143},0).wait(1).to({alpha:0.7857},0).wait(1).to({alpha:0.8571},0).wait(1).to({alpha:0.9286},0).wait(1).to({alpha:1},0).wait(28));
+	this.timeline.addTween(cjs.Tween.get(this.instance_1).wait(78).to({_off:false},0).wait(1).to({regX:147.5,regY:21.2,scaleY:0.8718,x:149.55,y:145.05,alpha:0.0714},0).wait(1).to({alpha:0.1429},0).wait(1).to({alpha:0.2143},0).wait(1).to({alpha:0.2857},0).wait(1).to({x:149.6,alpha:0.3571},0).wait(1).to({alpha:0.4286},0).wait(1).to({alpha:0.5},0).wait(1).to({alpha:0.5714},0).wait(1).to({alpha:0.6429},0).wait(1).to({alpha:0.7143},0).wait(1).to({alpha:0.7857},0).wait(1).to({scaleX:0.8718,alpha:0.8571},0).wait(1).to({alpha:0.9286},0).wait(1).to({alpha:1},0).wait(28));
 
 	// header
 	this.instance_2 = new lib.header();
-	this.instance_2.setTransform(28,38,0.4,0.4);
+	this.instance_2.setTransform(19,69,0.271,0.271);
 	this.instance_2._off = true;
 
 	this.timeline.addTween(cjs.Tween.get(this.instance_2).wait(64).to({_off:false},0).wait(56));
@@ -184,7 +184,7 @@ lib.properties = {
 	color: "#FFFFFF",
 	opacity: 1.00,
 	manifest: [
-		{src:"images/index_atlas_.png?1583154388009", id:"index_atlas_"}
+		{src:"images/index_atlas_.png", id:"index_atlas_"}
 	],
 	preloads: []
 };
