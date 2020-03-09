@@ -3,7 +3,7 @@
 var p; // shortcut to reference prototypes
 var lib={};var ss={};var img={};
 lib.ssMetadata = [
-		{name:"index_atlas_", frames: [[0,344,415,88],[0,0,491,260],[0,262,491,80]]}
+		{name:"index_atlas_", frames: [[0,354,415,88],[0,0,491,260],[0,262,625,90]]}
 ];
 
 
@@ -73,7 +73,7 @@ function getMCSymbolPrototype(symbol, nominalBounds, frameBounds) {
 
 	this._renderFirstFrame();
 
-}).prototype = getMCSymbolPrototype(lib.Symbol2, new cjs.Rectangle(0,0,577,94), null);
+}).prototype = getMCSymbolPrototype(lib.Symbol2, new cjs.Rectangle(0,0,734.5,105.8), null);
 
 
 (lib.Symbol1 = function(mode,startPosition,loop) {
@@ -119,11 +119,11 @@ if (loop == null) { loop = false; }	this.initialize(mode,startPosition,loop,{});
 
 	// vorteil
 	this.instance_1 = new lib.Symbol2();
-	this.instance_1.setTransform(300.5,601,1,1,0,0,0,288.5,47);
+	this.instance_1.setTransform(240.15,599,0.7896,0.7896,0,0,0,288.5,47.1);
 	this.instance_1.alpha = 0;
 	this.instance_1._off = true;
 
-	this.timeline.addTween(cjs.Tween.get(this.instance_1).wait(15).to({_off:false},0).wait(1).to({alpha:0.0435},0).wait(1).to({alpha:0.087},0).wait(1).to({alpha:0.1304},0).wait(1).to({alpha:0.1739},0).wait(1).to({alpha:0.2174},0).wait(1).to({alpha:0.2609},0).wait(1).to({alpha:0.3043},0).wait(1).to({alpha:0.3478},0).wait(1).to({alpha:0.3913},0).wait(1).to({alpha:0.4348},0).wait(1).to({alpha:0.4783},0).wait(1).to({alpha:0.5217},0).wait(1).to({alpha:0.5652},0).wait(1).to({alpha:0.6087},0).wait(1).to({alpha:0.6522},0).wait(1).to({alpha:0.6957},0).wait(1).to({alpha:0.7391},0).wait(1).to({alpha:0.7826},0).wait(1).to({alpha:0.8261},0).wait(1).to({alpha:0.8696},0).wait(1).to({alpha:0.913},0).wait(1).to({alpha:0.9565},0).wait(1).to({alpha:1},0).wait(13));
+	this.timeline.addTween(cjs.Tween.get(this.instance_1).wait(15).to({_off:false},0).wait(1).to({regX:367.2,regY:52.9,x:302.25,y:603.55,alpha:0.0435},0).wait(1).to({alpha:0.087},0).wait(1).to({scaleY:0.7895,x:302.3,alpha:0.1304},0).wait(1).to({scaleX:0.7897,alpha:0.1739},0).wait(1).to({alpha:0.2174},0).wait(1).to({alpha:0.2609},0).wait(1).to({alpha:0.3043},0).wait(1).to({alpha:0.3478},0).wait(1).to({alpha:0.3913},0).wait(1).to({scaleY:0.7894,alpha:0.4348},0).wait(1).to({alpha:0.4783},0).wait(1).to({alpha:0.5217},0).wait(1).to({alpha:0.5652},0).wait(1).to({alpha:0.6087},0).wait(1).to({alpha:0.6522},0).wait(1).to({scaleY:0.7893,alpha:0.6957},0).wait(1).to({alpha:0.7391},0).wait(1).to({alpha:0.7826},0).wait(1).to({alpha:0.8261},0).wait(1).to({alpha:0.8696},0).wait(1).to({alpha:0.913},0).wait(1).to({scaleY:0.7892,alpha:0.9565},0).wait(1).to({alpha:1},0).wait(13));
 
 	// header
 	this.instance_2 = new lib.Symbol1();
@@ -135,7 +135,7 @@ if (loop == null) { loop = false; }	this.initialize(mode,startPosition,loop,{});
 	this._renderFirstFrame();
 
 }).prototype = p = new cjs.MovieClip();
-p.nominalBounds = new cjs.Rectangle(311,765,278,77.29999999999995);
+p.nominalBounds = new cjs.Rectangle(311,765,281.4,77.29999999999995);
 // library properties:
 lib.properties = {
 	id: '59DD181D3D5CC0488BDE8FADDDDE3413',
