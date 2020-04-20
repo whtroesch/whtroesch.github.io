@@ -1,0 +1,119 @@
+
+@import url('https://fonts.googleapis.com/css?family=Ruda:400,700,900&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    height: 100%;
+    width: 100%;
+}
+
+body {
+    color: #ffffff;
+    font-family: 'Ruda', Helvetica, sans-serif;
+    font-size: 100%;
+    height: 100%;
+    width: 100%;
+}
+
+.superbrand-wrapper {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: flex;
+    -webkit-box-direction: normal;
+    -moz-box-direction: normal;
+    -webkit-box-orient: vertical;
+    -moz-box-orient: vertical;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    padding: 0% 0% 2% 0%;
+    margin: 0 auto;
+}
+
+.productAtz {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: flex;
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-justify-content: space-around;
+    justify-content: space-around;
+    height: 34%;
+}
+
+@supports not (-ms-ime-align: auto) {
+    .productAtz {
+      justify-content: space-evenly;
+    }
+}
+
+.productAtz article {
+    height: 48%;
+    width: 36%;
+    padding-bottom: 22px;
+    
+}
+
+.itemBox {
+    opacity: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 1);
+    background-position: top center;
+    background-repeat: no-repeat;
+    background-size: contain;    
+    border: 0;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    transition: box-shadow 0.125s linear;
+}
+
+.itemPrice {
+    padding: 2px 4px;
+    position: absolute;
+    right: 0;
+    top: 0;
+    background-color: #FEDA31;
+    color: #040002;
+    font-size: 1.8vh;
+    font-weight: 900;   
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    transition: box-shadow 0.125s linear;
+}
+
+.itemTitle {
+    width: 100%;
+    padding: 4px 2px 3px;
+    position: absolute;
+    bottom: -16px;
+    left: 0;
+    background-color: #000;
+    color: #ffffff;
+    font-size: 1.3vh;
+    font-weight: 700;
+    height: 15%;
+}
+
+.scaleBox {
+    cursor: pointer;
+    transform: scale(1);
+    transition: transform 0.125s linear;
+}
+
+.scaleBox:hover {
+    transform: scale(1.05);
+}
+
+
+.top {
+    height: 55%;
+}
