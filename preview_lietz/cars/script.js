@@ -149,8 +149,10 @@ function shopCycle() {
         }
 
         var price = config.items[config.itemIndex].price;
-        if (price % 1 === 0) $("#ib" + i).find(".itemPrice").html("&euro; " + config.items[config.itemIndex].price);
-        else $("#ib" + i).find(".itemPrice").html("&euro; " + config.items[config.itemIndex].price.toFixed(2).replace(".", ","));
+        var formatedPrice = formatThousandsNoRounding(Number(price));
+
+        if (price % 1 === 0) $("#ib" + i).find(".itemPrice").html("&euro; " + formatedPrice);
+        else $("#ib" + i).find(".itemPrice").html("&euro; " + formatedPrice);
 
         $("#ib" + i).find(".itemTitle").html(cropTitle(config.items[config.itemIndex].title));
 
@@ -166,6 +168,16 @@ function shopCycle() {
     }
     window.setTimeout(shopFadeout, config.pageDelay);
 }
+
+var formatThousandsNoRounding = function(n, dp){
+    var e = '', s = e+n, l = s.length, b = n < 0 ? 1 : 0,
+    i = s.lastIndexOf('.'), j = i == -1 ? l : i,
+    r = e, d = s.substr(j+1, dp);
+    while ( (j-=3) > b ) { r = '.' + s.substr(j, 3) + r; }
+    return s.substr(0, j + 3) + r + 
+        (dp ? ',' + d + ( d.length < dp ? 
+            ('00000').substr(0, dp - d.length):e):e + '');
+};
 
 
 function shopFadeout() {
