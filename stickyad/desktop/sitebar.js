@@ -5,6 +5,14 @@
   var img = {};
   lib.ssMetadata = [];
 
+
+function cropTitle(title) {
+  if (title.length > 47) {
+      title = title.substr(0, 46).trim() + "&hellip;";
+  }
+
+  return title;
+}
   // symbols:
 
   (lib.haendler_logo = function() {
