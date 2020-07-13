@@ -294,6 +294,7 @@
     this.txt_carname.lineHeight = 32;
     this.txt_carname.lineWidth = 495;
     this.txt_carname.parent = this;
+    this.txt_cardesc.maxLength = 50;
     this.txt_carname.setTransform(250, 2);
 
     this.timeline.addTween(
