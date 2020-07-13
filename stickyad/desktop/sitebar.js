@@ -6,14 +6,7 @@
   lib.ssMetadata = [];
 
 
-function cropTitle(title) {
-  if (title.length > 47) {
-      title = title.substr(0, 46).trim() + "&hellip;";
-  }
-
-  return title;
-}
-  // symbols:
+ // symbols:
 
   (lib.haendler_logo = function() {
     this.initialize(img.haendler_logo);
@@ -288,6 +281,7 @@ function cropTitle(title) {
     this.txt_cardesc.lineHeight = 27;
     this.txt_cardesc.lineWidth = 495;
     this.txt_cardesc.parent = this;
+    this.txt_cardesc.maxLength = 50;
     this.txt_cardesc.setTransform(249.6, 36.55);
 
     this.txt_carname = new cjs.Text(
