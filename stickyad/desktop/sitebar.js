@@ -286,7 +286,7 @@
 
     this.txt_carname = new cjs.Text(
       "Seat Ateca",
-      "400 24px 'Open Sans'",
+      "400 22px 'Open Sans'",
       "#8496b0"
     );
     this.txt_carname.name = "txt_carname";
@@ -294,7 +294,7 @@
     this.txt_carname.lineHeight = 27;
     this.txt_carname.lineWidth = 495;
     this.txt_carname.parent = this;
-    this.txt_cardesc.maxLength = 50;
+    this.txt_carname.maxLength = 50;
     this.txt_carname.setTransform(250, 2);
 
     this.timeline.addTween(
