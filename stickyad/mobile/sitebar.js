@@ -55,7 +55,7 @@
     );
     this.txt_hl.name = "txt_hl";
     this.txt_hl.textAlign = "center";
-    this.txt_hl.lineHeight = 35;
+    this.txt_hl.lineHeight = 30;
     this.txt_hl.lineWidth = 300;
     this.txt_hl.parent = this;
     this.txt_hl.setTransform(150, 0);
