@@ -77,7 +77,7 @@
     );
     this.txt_carname.name = "txt_carname";
     this.txt_carname.textAlign = "center";
-    this.txt_carname.lineHeight = 20;
+    this.txt_carname.lineHeight = 10;
     this.txt_carname.lineWidth = 300;
     this.txt_carname.parent = this;
     this.txt_carname.setTransform(150, 0);
