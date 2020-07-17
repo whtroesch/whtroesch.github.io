@@ -72,7 +72,7 @@
 
     this.txt_carname = new cjs.Text(
       "Seat Ateca",
-      "bold 14px 'Open Sans'",
+      "500 12px 'Open Sans'",
       "#8496b0"
     );
     this.txt_carname.name = "txt_carname";
