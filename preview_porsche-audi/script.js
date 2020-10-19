@@ -1,5 +1,4 @@
-var jsonFeed = "https://cdn-willhaben.adverserve.net/motor_json/<ORGID>.json";
-//var jsonFeed ="https://cdn-willhaben.adverserve.net/motor_json/19868294.json"
+var jsonFeed = "cars.json";
 
 var config = {
     items: null,
@@ -43,8 +42,8 @@ function arrayTrim(array) {
 }
 
 function cropTitle(title) {
-    if (title.length > 30) {
-        title = title.substr(0, 29).trim() + "&hellip;";
+    if (title.length > 33) {
+        title = title.substr(0, 32).trim() + "&hellip;";
     }
 
     return title;
@@ -89,17 +88,12 @@ function jqReady() {
         // button
         var target1 = getUriParams()["clicktag1"] || null;
         if (target1 != null) $("#superbrandButton1").attr("href", target1);
-      
+        
         // redirect
         config.redirect = getUriParams()["feed"] || null;
 
         preloading(0);
     });
-}
-
-function sendEmail() 
-{
-    window.location.assign("mailto:office@auto-hausenberger.at");
 }
 
 function preloading(index) {
