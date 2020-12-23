@@ -3,7 +3,7 @@
 var p; // shortcut to reference prototypes
 var lib={};var ss={};var img={};
 lib.ssMetadata = [
-		{name:"index_atlas_", frames: [[0,0,1120,330],[0,332,1120,260],[1122,126,384,40],[0,594,595,133],[1122,84,391,40],[1122,168,349,40],[1122,42,446,40],[597,594,527,60],[1122,0,479,40]]}
+		{name:"index_atlas_", frames: [[0,0,1684,330],[0,332,1684,260],[0,594,1120,330],[0,926,1120,260],[1651,862,384,40],[1122,594,595,133],[1651,820,391,40],[1122,729,826,48],[1122,882,446,40],[1122,820,527,60],[1122,779,817,39]]}
 ];
 
 
@@ -11,65 +11,79 @@ lib.ssMetadata = [
 
 
 
-(lib.CachedBmp_39 = function() {
+(lib.CachedBmp_4 = function() {
 	this.initialize(ss["index_atlas_"]);
 	this.gotoAndStop(0);
 }).prototype = p = new cjs.Sprite();
 
 
 
-(lib.CachedBmp_37 = function() {
+(lib.CachedBmp_3 = function() {
 	this.initialize(ss["index_atlas_"]);
 	this.gotoAndStop(1);
 }).prototype = p = new cjs.Sprite();
 
 
 
-(lib.gleisdorf = function() {
+(lib.CachedBmp_8 = function() {
 	this.initialize(ss["index_atlas_"]);
 	this.gotoAndStop(2);
 }).prototype = p = new cjs.Sprite();
 
 
 
-(lib.logo = function() {
+(lib.CachedBmp_6 = function() {
 	this.initialize(ss["index_atlas_"]);
 	this.gotoAndStop(3);
 }).prototype = p = new cjs.Sprite();
 
 
 
-(lib.mehrals = function() {
+(lib.gleisdorf = function() {
 	this.initialize(ss["index_atlas_"]);
 	this.gotoAndStop(4);
 }).prototype = p = new cjs.Sprite();
 
 
 
-(lib.neuwertig = function() {
+(lib.logo = function() {
 	this.initialize(ss["index_atlas_"]);
 	this.gotoAndStop(5);
 }).prototype = p = new cjs.Sprite();
 
 
 
-(lib.oberwart = function() {
+(lib.mehrals = function() {
 	this.initialize(ss["index_atlas_"]);
 	this.gotoAndStop(6);
 }).prototype = p = new cjs.Sprite();
 
 
 
-(lib.qualitaet = function() {
+(lib.neuwertig = function() {
 	this.initialize(ss["index_atlas_"]);
 	this.gotoAndStop(7);
 }).prototype = p = new cjs.Sprite();
 
 
 
-(lib.schlaue = function() {
+(lib.oberwart = function() {
 	this.initialize(ss["index_atlas_"]);
 	this.gotoAndStop(8);
+}).prototype = p = new cjs.Sprite();
+
+
+
+(lib.qualitaet = function() {
+	this.initialize(ss["index_atlas_"]);
+	this.gotoAndStop(9);
+}).prototype = p = new cjs.Sprite();
+
+
+
+(lib.schlaue = function() {
+	this.initialize(ss["index_atlas_"]);
+	this.gotoAndStop(10);
 }).prototype = p = new cjs.Sprite();
 // helper functions:
 
@@ -126,7 +140,7 @@ function getMCSymbolPrototype(symbol, nominalBounds, frameBounds) {
 
 	this._renderFirstFrame();
 
-}).prototype = getMCSymbolPrototype(lib.Symbol5, new cjs.Rectangle(0,0,479,40), null);
+}).prototype = getMCSymbolPrototype(lib.Symbol5, new cjs.Rectangle(0,0,817,39), null);
 
 
 (lib.Symbol4 = function(mode,startPosition,loop) {
@@ -139,7 +153,7 @@ function getMCSymbolPrototype(symbol, nominalBounds, frameBounds) {
 
 	this._renderFirstFrame();
 
-}).prototype = getMCSymbolPrototype(lib.Symbol4, new cjs.Rectangle(0,0,349,40), null);
+}).prototype = getMCSymbolPrototype(lib.Symbol4, new cjs.Rectangle(0,0,826,48), null);
 
 
 (lib.Symbol3 = function(mode,startPosition,loop) {
@@ -186,7 +200,7 @@ function getMCSymbolPrototype(symbol, nominalBounds, frameBounds) {
 	this.initialize(mode,startPosition,loop,{});
 
 	// olow
-	this.instance = new lib.CachedBmp_37();
+	this.instance = new lib.CachedBmp_6();
 	this.instance.setTransform(210,192,0.5,0.5);
 	this.instance._off = true;
 
@@ -200,7 +214,7 @@ function getMCSymbolPrototype(symbol, nominalBounds, frameBounds) {
 	this.timeline.addTween(cjs.Tween.get(this.instance_1).wait(149).to({_off:false},0).wait(1).to({y:215.75},0).wait(1).to({y:206.5},0).wait(1).to({y:197.25},0).wait(1).to({y:188},0).wait(1).to({y:178.75},0).wait(1).to({y:169.5},0).wait(1).to({y:160.25},0).wait(1).to({y:151},0).wait(40).to({y:160},0).wait(1).to({y:169},0).wait(1).to({y:178},0).wait(1).to({y:187},0).wait(1).to({y:196},0).wait(1).to({y:205},0).wait(1).to({y:214},0).wait(1).to({y:223},0).wait(1));
 
 	// olgd
-	this.instance_2 = new lib.CachedBmp_39();
+	this.instance_2 = new lib.CachedBmp_8();
 	this.instance_2.setTransform(210,136,0.5,0.5);
 	this.instance_2._off = true;
 
@@ -214,35 +228,35 @@ function getMCSymbolPrototype(symbol, nominalBounds, frameBounds) {
 	this.timeline.addTween(cjs.Tween.get(this.instance_3).wait(149).to({_off:false},0).wait(1).to({y:154.75},0).wait(1).to({y:145.5},0).wait(1).to({y:136.25},0).wait(1).to({y:127},0).wait(1).to({y:117.75},0).wait(1).to({y:108.5},0).wait(1).to({y:99.25},0).wait(1).to({y:90},0).wait(40).to({y:99},0).wait(1).to({y:108},0).wait(1).to({y:117},0).wait(1).to({y:126},0).wait(1).to({y:135},0).wait(1).to({y:144},0).wait(1).to({y:153},0).wait(1).to({y:162},0).wait(1));
 
 	// olneu
-	this.instance_4 = new lib.CachedBmp_37();
-	this.instance_4.setTransform(210,192,0.5,0.5);
+	this.instance_4 = new lib.CachedBmp_3();
+	this.instance_4.setTransform(69.05,192,0.5,0.5);
 	this.instance_4._off = true;
 
 	this.timeline.addTween(cjs.Tween.get(this.instance_4).wait(98).to({_off:false},0).to({_off:true},51).wait(56));
 
 	// neuwerti
 	this.instance_5 = new lib.Symbol4();
-	this.instance_5.setTransform(420.5,272,1,1,0,0,0,174.5,20);
+	this.instance_5.setTransform(246.5,272,1,1,0,0,0,174.5,20);
 	this.instance_5._off = true;
 
-	this.timeline.addTween(cjs.Tween.get(this.instance_5).wait(98).to({_off:false},0).wait(1).to({y:256.75},0).wait(1).to({y:241.5},0).wait(1).to({y:226.25},0).wait(1).to({y:211},0).wait(1).to({y:195.75},0).wait(1).to({y:180.5},0).wait(1).to({y:165.25},0).wait(1).to({y:150},0).wait(35).to({y:161.35},0).wait(1).to({y:172.7},0).wait(1).to({y:184.1},0).wait(1).to({y:195.45},0).wait(1).to({y:206.8},0).wait(1).to({y:218.2},0).wait(1).to({y:229.55},0).wait(1).to({y:240.95},0).to({_off:true},1).wait(56));
+	this.timeline.addTween(cjs.Tween.get(this.instance_5).wait(98).to({_off:false},0).wait(1).to({regX:413,regY:24,x:485,y:260.75},0).wait(1).to({y:245.5},0).wait(1).to({y:230.25},0).wait(1).to({y:215},0).wait(1).to({y:199.75},0).wait(1).to({y:184.5},0).wait(1).to({y:169.25},0).wait(1).to({y:154},0).wait(35).to({y:165.35},0).wait(1).to({y:176.7},0).wait(1).to({y:188.1},0).wait(1).to({y:199.45},0).wait(1).to({y:210.8},0).wait(1).to({y:222.2},0).wait(1).to({y:233.55},0).wait(1).to({y:244.95},0).to({_off:true},1).wait(56));
 
 	// olschl
-	this.instance_6 = new lib.CachedBmp_39();
-	this.instance_6.setTransform(210,136,0.5,0.5);
+	this.instance_6 = new lib.CachedBmp_4();
+	this.instance_6.setTransform(69,136,0.5,0.5);
 	this.instance_6._off = true;
 
 	this.timeline.addTween(cjs.Tween.get(this.instance_6).wait(98).to({_off:false},0).to({_off:true},51).wait(56));
 
 	// schlaue
 	this.instance_7 = new lib.Symbol5();
-	this.instance_7.setTransform(485.5,212,1,1,0,0,0,239.5,20);
+	this.instance_7.setTransform(316,212,1,1,0,0,0,239.5,20);
 	this.instance_7._off = true;
 
-	this.timeline.addTween(cjs.Tween.get(this.instance_7).wait(98).to({_off:false},0).wait(1).to({y:196.75},0).wait(1).to({y:181.5},0).wait(1).to({y:166.25},0).wait(1).to({y:151},0).wait(1).to({y:135.75},0).wait(1).to({y:120.5},0).wait(1).to({y:105.25},0).wait(1).to({y:90},0).wait(35).to({y:101.35},0).wait(1).to({y:112.7},0).wait(1).to({y:124.1},0).wait(1).to({y:135.45},0).wait(1).to({y:146.8},0).wait(1).to({y:158.2},0).wait(1).to({y:169.55},0).wait(1).to({y:180.95},0).to({_off:true},1).wait(56));
+	this.timeline.addTween(cjs.Tween.get(this.instance_7).wait(98).to({_off:false},0).wait(1).to({regX:408.5,regY:19.5,x:485,y:196.25},0).wait(1).to({y:181},0).wait(1).to({y:165.75},0).wait(1).to({y:150.5},0).wait(1).to({y:135.25},0).wait(1).to({y:120},0).wait(1).to({y:104.75},0).wait(1).to({y:89.5},0).wait(35).to({y:100.85},0).wait(1).to({y:112.2},0).wait(1).to({y:123.6},0).wait(1).to({y:134.95},0).wait(1).to({y:146.3},0).wait(1).to({y:157.7},0).wait(1).to({y:169.05},0).wait(1).to({y:180.45},0).to({_off:true},1).wait(56));
 
 	// olqualw
-	this.instance_8 = new lib.CachedBmp_37();
+	this.instance_8 = new lib.CachedBmp_6();
 	this.instance_8.setTransform(210,192,0.5,0.5);
 	this.instance_8._off = true;
 
@@ -256,7 +270,7 @@ function getMCSymbolPrototype(symbol, nominalBounds, frameBounds) {
 	this.timeline.addTween(cjs.Tween.get(this.instance_9).wait(47).to({_off:false},0).wait(1).to({y:221.6},0).wait(1).to({y:211.25},0).wait(1).to({y:200.85},0).wait(1).to({y:190.5},0).wait(1).to({y:180.1},0).wait(1).to({y:169.75},0).wait(1).to({y:159.35},0).wait(1).to({y:149},0).wait(35).to({y:159.35},0).wait(1).to({y:169.75},0).wait(1).to({y:180.1},0).wait(1).to({y:190.5},0).wait(1).to({y:200.85},0).wait(1).to({y:211.25},0).wait(1).to({y:221.6},0).wait(1).to({y:232},0).to({_off:true},1).wait(107));
 
 	// olmehr
-	this.instance_10 = new lib.CachedBmp_39();
+	this.instance_10 = new lib.CachedBmp_8();
 	this.instance_10.setTransform(210,136,0.5,0.5);
 	this.instance_10._off = true;
 
@@ -279,7 +293,7 @@ function getMCSymbolPrototype(symbol, nominalBounds, frameBounds) {
 	this._renderFirstFrame();
 
 }).prototype = p = new cjs.MovieClip();
-p.nominalBounds = new cjs.Rectangle(673,184,110,138);
+p.nominalBounds = new cjs.Rectangle(554,184,357.1,138);
 // library properties:
 lib.properties = {
 	id: 'BE295D5B020B5941A9906F7CFD4E4893',
