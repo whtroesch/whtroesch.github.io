@@ -24,74 +24,74 @@ lib.ssMetadata = [];
 
 
 
-(lib.10ledblinker = function() {
-	this.initialize(img.10ledblinker);
+(lib._10ledblinker = function() {
+	this.initialize(img._10ledblinker);
 }).prototype = p = new cjs.Bitmap();
 p.nominalBounds = new cjs.Rectangle(0,0,700,581);
 
 
-(lib.11tuningfelgen = function() {
-	this.initialize(img.11tuningfelgen);
+(lib._11tuningfelgen = function() {
+	this.initialize(img._11tuningfelgen);
 }).prototype = p = new cjs.Bitmap();
 p.nominalBounds = new cjs.Rectangle(0,0,700,581);
 
 
-(lib.12sportauspuff = function() {
-	this.initialize(img.12sportauspuff);
+(lib._12sportauspuff = function() {
+	this.initialize(img._12sportauspuff);
 }).prototype = p = new cjs.Bitmap();
 p.nominalBounds = new cjs.Rectangle(0,0,700,581);
 
 
-(lib.1white = function() {
-	this.initialize(img.1white);
+(lib._1white = function() {
+	this.initialize(img._1white);
 }).prototype = p = new cjs.Bitmap();
 p.nominalBounds = new cjs.Rectangle(0,0,700,581);
 
 
-(lib.2red = function() {
-	this.initialize(img.2red);
+(lib._2red = function() {
+	this.initialize(img._2red);
 }).prototype = p = new cjs.Bitmap();
 p.nominalBounds = new cjs.Rectangle(0,0,700,581);
 
 
-(lib.3yellow = function() {
-	this.initialize(img.3yellow);
+(lib._3yellow = function() {
+	this.initialize(img._3yellow);
 }).prototype = p = new cjs.Bitmap();
 p.nominalBounds = new cjs.Rectangle(0,0,700,581);
 
 
-(lib.4black = function() {
-	this.initialize(img.4black);
+(lib._4black = function() {
+	this.initialize(img._4black);
 }).prototype = p = new cjs.Bitmap();
 p.nominalBounds = new cjs.Rectangle(0,0,700,581);
 
 
-(lib.5grey = function() {
-	this.initialize(img.5grey);
+(lib._5grey = function() {
+	this.initialize(img._5grey);
 }).prototype = p = new cjs.Bitmap();
 p.nominalBounds = new cjs.Rectangle(0,0,700,581);
 
 
-(lib.6handgriffe = function() {
-	this.initialize(img.6handgriffe);
+(lib._6handgriffe = function() {
+	this.initialize(img._6handgriffe);
 }).prototype = p = new cjs.Bitmap();
 p.nominalBounds = new cjs.Rectangle(0,0,700,581);
 
 
-(lib.7tuningspiegel = function() {
-	this.initialize(img.7tuningspiegel);
+(lib._7tuningspiegel = function() {
+	this.initialize(img._7tuningspiegel);
 }).prototype = p = new cjs.Bitmap();
 p.nominalBounds = new cjs.Rectangle(0,0,700,581);
 
 
-(lib.8blackpackohnespiegel = function() {
-	this.initialize(img.8blackpackohnespiegel);
+(lib._8blackpackohnespiegel = function() {
+	this.initialize(img._8blackpackohnespiegel);
 }).prototype = p = new cjs.Bitmap();
 p.nominalBounds = new cjs.Rectangle(0,0,700,581);
 
 
-(lib.9sitzgrau = function() {
-	this.initialize(img.9sitzgrau);
+(lib._9sitzgrau = function() {
+	this.initialize(img._9sitzgrau);
 }).prototype = p = new cjs.Bitmap();
 p.nominalBounds = new cjs.Rectangle(0,0,700,581);
 
@@ -533,18 +533,18 @@ lib.properties = {
 	color: "#F0F0F0",
 	opacity: 1.00,
 	manifest: [
-		{src:"images/_10ledblinker.png", id:"_10ledblinker"},
-		{src:"images/_11tuningfelgen.png", id:"_11tuningfelgen"},
-		{src:"images/_12sportauspuff.png", id:"_12sportauspuff"},
-		{src:"images/_1white.png", id:"_1white"},
-		{src:"images/_2red.png", id:"_2red"},
-		{src:"images/_3yellow.png", id:"_3yellow"},
-		{src:"images/_4black.png", id:"_4black"},
-		{src:"images/_5grey.png", id:"_5grey"},
-		{src:"images/_6handgriffe.png", id:"_6handgriffe"},
-		{src:"images/_7tuningspiegel.png", id:"_7tuningspiegel"},
-		{src:"images/_8blackpackohnespiegel.png", id:"_8blackpackohnespiegel"},
-		{src:"images/_9sitzgrau.png", id:"_9sitzgrau"},
+		{src:"images/10ledblinker.png", id:"_10ledblinker"},
+		{src:"images/11tuningfelgen.png", id:"_11tuningfelgen"},
+		{src:"images/12sportauspuff.png", id:"_12sportauspuff"},
+		{src:"images/1white.png", id:"_1white"},
+		{src:"images/2red.png", id:"_2red"},
+		{src:"images/3yellow.png", id:"_3yellow"},
+		{src:"images/4black.png", id:"_4black"},
+		{src:"images/5grey.png", id:"_5grey"},
+		{src:"images/6handgriffe.png", id:"_6handgriffe"},
+		{src:"images/7tuningspiegel.png", id:"_7tuningspiegel"},
+		{src:"images/8blackpackohnespiegel.png", id:"_8blackpackohnespiegel"},
+		{src:"images/9sitzgrau.png", id:"_9sitzgrau"},
 		{src:"images/button.png", id:"button"},
 		{src:"images/logo.jpg", id:"logo"}
 	],
