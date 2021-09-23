@@ -24,74 +24,74 @@ lib.ssMetadata = [];
 
 
 
-(lib._10ledblinker = function() {
-	this.initialize(img._10ledblinker);
+(lib.10ledblinker = function() {
+	this.initialize(img.10ledblinker);
 }).prototype = p = new cjs.Bitmap();
 p.nominalBounds = new cjs.Rectangle(0,0,700,581);
 
 
-(lib._11tuningfelgen = function() {
-	this.initialize(img._11tuningfelgen);
+(lib.11tuningfelgen = function() {
+	this.initialize(img.11tuningfelgen);
 }).prototype = p = new cjs.Bitmap();
 p.nominalBounds = new cjs.Rectangle(0,0,700,581);
 
 
-(lib._12sportauspuff = function() {
-	this.initialize(img._12sportauspuff);
+(lib.12sportauspuff = function() {
+	this.initialize(img.12sportauspuff);
 }).prototype = p = new cjs.Bitmap();
 p.nominalBounds = new cjs.Rectangle(0,0,700,581);
 
 
-(lib._1white = function() {
-	this.initialize(img._1white);
+(lib.1white = function() {
+	this.initialize(img.1white);
 }).prototype = p = new cjs.Bitmap();
 p.nominalBounds = new cjs.Rectangle(0,0,700,581);
 
 
-(lib._2red = function() {
-	this.initialize(img._2red);
+(lib.2red = function() {
+	this.initialize(img.2red);
 }).prototype = p = new cjs.Bitmap();
 p.nominalBounds = new cjs.Rectangle(0,0,700,581);
 
 
-(lib._3yellow = function() {
-	this.initialize(img._3yellow);
+(lib.3yellow = function() {
+	this.initialize(img.3yellow);
 }).prototype = p = new cjs.Bitmap();
 p.nominalBounds = new cjs.Rectangle(0,0,700,581);
 
 
-(lib._4black = function() {
-	this.initialize(img._4black);
+(lib.4black = function() {
+	this.initialize(img.4black);
 }).prototype = p = new cjs.Bitmap();
 p.nominalBounds = new cjs.Rectangle(0,0,700,581);
 
 
-(lib._5grey = function() {
-	this.initialize(img._5grey);
+(lib.5grey = function() {
+	this.initialize(img.5grey);
 }).prototype = p = new cjs.Bitmap();
 p.nominalBounds = new cjs.Rectangle(0,0,700,581);
 
 
-(lib._6handgriffe = function() {
-	this.initialize(img._6handgriffe);
+(lib.6handgriffe = function() {
+	this.initialize(img.6handgriffe);
 }).prototype = p = new cjs.Bitmap();
 p.nominalBounds = new cjs.Rectangle(0,0,700,581);
 
 
-(lib._7tuningspiegel = function() {
-	this.initialize(img._7tuningspiegel);
+(lib.7tuningspiegel = function() {
+	this.initialize(img.7tuningspiegel);
 }).prototype = p = new cjs.Bitmap();
 p.nominalBounds = new cjs.Rectangle(0,0,700,581);
 
 
-(lib._8blackpackohnespiegel = function() {
-	this.initialize(img._8blackpackohnespiegel);
+(lib.8blackpackohnespiegel = function() {
+	this.initialize(img.8blackpackohnespiegel);
 }).prototype = p = new cjs.Bitmap();
 p.nominalBounds = new cjs.Rectangle(0,0,700,581);
 
 
-(lib._9sitzgrau = function() {
-	this.initialize(img._9sitzgrau);
+(lib.9sitzgrau = function() {
+	this.initialize(img.9sitzgrau);
 }).prototype = p = new cjs.Bitmap();
 p.nominalBounds = new cjs.Rectangle(0,0,700,581);
 
