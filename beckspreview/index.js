@@ -153,9 +153,9 @@ if (reversed == null) { reversed = false; }
 
 	// logo
 	this.instance_1 = new lib.Symbol1();
-	this.instance_1.setTransform(116.55,104.05,0.009,0.009,0,0,0,77.8,61.1);
+	this.instance_1.setTransform(119,109.2,0.0039,0.0039,0,0,0,101.6,88.9);
 
-	this.timeline.addTween(cjs.Tween.get(this.instance_1).wait(1).to({regX:109.5,regY:101,scaleX:0.0751,scaleY:0.0751,x:117.3,y:105.15},0).wait(1).to({scaleX:0.1411,scaleY:0.1411,x:117.8,y:105.85},0).wait(1).to({scaleX:0.2072,scaleY:0.2072,x:118.3,y:106.6},0).wait(1).to({scaleX:0.2733,scaleY:0.2733,x:118.8,y:107.35},0).wait(1).to({scaleX:0.3393,scaleY:0.3393,x:119.3,y:108.05},0).wait(1).to({scaleX:0.4054,scaleY:0.4054,x:119.8,y:108.8},0).wait(1).to({scaleX:0.4715,scaleY:0.4715,x:120.3,y:109.5},0).wait(1).to({scaleX:0.5375,scaleY:0.5375,x:120.8,y:110.3},0).wait(1).to({scaleX:0.6036,scaleY:0.6036,x:121.3,y:111},0).wait(1).to({scaleX:0.6697,scaleY:0.6697,x:121.8,y:111.75},0).wait(1).to({scaleX:0.7357,scaleY:0.7357,x:122.25,y:112.45},0).wait(1).to({scaleX:0.8018,scaleY:0.8018,x:122.8,y:113.25},0).wait(1).to({scaleX:0.8679,scaleY:0.8679,x:123.3,y:113.95},0).wait(1).to({scaleX:0.9339,scaleY:0.9339,x:123.75,y:114.7},0).wait(1).to({scaleX:1,scaleY:1,x:124.25,y:115.45},0).wait(110));
+	this.timeline.addTween(cjs.Tween.get(this.instance_1).wait(1).to({regX:109.5,regY:101,scaleX:0.0703,scaleY:0.0703,x:118.95},0).wait(1).to({scaleX:0.1367,scaleY:0.1367,x:118.85},0).wait(1).to({scaleX:0.2031,scaleY:0.2031},0).wait(1).to({scaleX:0.2696,scaleY:0.2696,x:118.75,y:109.15},0).wait(1).to({scaleX:0.336,scaleY:0.336,y:109.2},0).wait(1).to({scaleX:0.4024,scaleY:0.4024,x:118.65},0).wait(1).to({scaleX:0.4688,scaleY:0.4688},0).wait(1).to({scaleX:0.5352,scaleY:0.5352,x:118.55,y:109.15},0).wait(1).to({scaleX:0.6016,scaleY:0.6016,x:118.5},0).wait(1).to({scaleX:0.668,scaleY:0.668,x:118.45},0).wait(1).to({scaleX:0.7344,scaleY:0.7344,x:118.4},0).wait(1).to({scaleX:0.8008,scaleY:0.8008,x:118.35},0).wait(1).to({scaleX:0.8672,scaleY:0.8672,x:118.3},0).wait(1).to({scaleX:0.9336,scaleY:0.9336,x:118.25},0).wait(1).to({scaleX:1,scaleY:1,x:118.15,y:109.1},0).wait(110));
 
 	// eck
 	this.shape = new cjs.Shape();
