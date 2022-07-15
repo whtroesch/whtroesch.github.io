@@ -1,0 +1,67 @@
+﻿{"frames": {
+
+"logo":
+{
+	"frame": {"x":0,"y":0,"w":595,"h":133},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":595,"h":133},
+	"sourceSize": {"w":595,"h":133}
+},
+"mehrals":
+{
+	"frame": {"x":597,"y":0,"w":391,"h":40},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":391,"h":40},
+	"sourceSize": {"w":391,"h":40}
+},
+"qualitaet":
+{
+	"frame": {"x":0,"y":249,"w":700,"h":60},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":700,"h":60},
+	"sourceSize": {"w":700,"h":60}
+},
+"sofort":
+{
+	"frame": {"x":0,"y":311,"w":505,"h":52},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":505,"h":52},
+	"sourceSize": {"w":505,"h":52}
+},
+"top":
+{
+	"frame": {"x":0,"y":135,"w":718,"h":60},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":718,"h":60},
+	"sourceSize": {"w":718,"h":60}
+},
+"vw":
+{
+	"frame": {"x":597,"y":42,"w":391,"h":40},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":391,"h":40},
+	"sourceSize": {"w":391,"h":40}
+},
+"zusatzkosten":
+{
+	"frame": {"x":0,"y":197,"w":850,"h":50},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":850,"h":50},
+	"sourceSize": {"w":850,"h":50}
+}},
+"meta": {
+	"app": "Adobe Animate",
+	"version": "22.0.7.214",
+	"image": "index_atlas_2.png",
+	"format": "undefined",
+	"size": {"w":1024,"h":512},
+	"scale": "1"
+}
+}
