@@ -1,5 +1,5 @@
 //var jsonFeed = "https://cdn-willhaben.adverserve.net/motor_json/<ORGID>.json";
-var jsonFeed ="https://cdn-willhaben.adverserve.net/motor_json/19911895.json"
+var jsonFeed ="19911895.json"
 
 var config = {
     items: null,
