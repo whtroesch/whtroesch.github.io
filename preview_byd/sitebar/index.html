@@ -16,6 +16,20 @@
 <script src="https://code.createjs.com/1.0.0/createjs.min.js"></script>
 <script src="index.js"></script>
 <script>
+	var getUriParams = function() {
+		var query_string = {}
+		var query = window.location.search.substring(1);
+		var parmsArray = query.split('&');
+		if(parmsArray.length <= 0) return query_string;
+		for(var i = 0; i < parmsArray.length; i++) {
+			var pair = parmsArray[i].split('=');
+			var val = decodeURIComponent(pair[1]);
+			if (val != '' && pair[0] != '') query_string[pair[0]] = val;
+		}
+		return query_string;
+	}();
+</script>	
+<script>
 var canvas, stage, exportRoot, anim_container, dom_overlay_container, fnStartAnimation;
 function init() {
 	canvas = document.getElementById("canvas");
@@ -43,8 +57,7 @@ function handleComplete(evt,comp) {
 		ss[ssMetadata[i].name] = new createjs.SpriteSheet( {"images": [queue.getResult(ssMetadata[i].name)], "frames": ssMetadata[i].frames} )
 	}
 	exportRoot = new lib.index();
-	stage = new lib.Stage(canvas);
-	stage.enableMouseOver();	
+	stage = new lib.Stage(canvas);	
 	//Registers the "tick" event listener.
 	fnStartAnimation = function() {
 		stage.addChild(exportRoot);
@@ -60,10 +73,15 @@ function handleComplete(evt,comp) {
 <!-- write your code here -->
 </head>
 <body onload="init();" style="margin:0px;">
-	<div id="animation_container" style="background-color:rgba(255, 255, 255, 1.00); width:600px; height:1200px">
-		<canvas id="canvas" width="600" height="1200" style="position: absolute; display: block; background-color:rgba(255, 255, 255, 1.00);"></canvas>
-		<div id="dom_overlay_container" style="pointer-events:none; overflow:hidden; width:600px; height:1200px; position: absolute; left: 0px; top: 0px; display: block;">
+	<a href="#clicktag" id="IAB_clicktag" target="_blank">
+		<div id="animation_container" style="background-color:rgba(255, 255, 255, 1.00); width:600px; height:1200px">
+			<canvas id="canvas" width="600" height="1200" style="position: absolute; display: block; background-color:rgba(255, 255, 255, 1.00);"></canvas>
+			<div id="dom_overlay_container" style="pointer-events:none; overflow:hidden; width:600px; height:1200px; position: absolute; left: 0px; top: 0px; display: block;">
+			</div>
 		</div>
-	</div>
+	</a>
+<script>
+	document.getElementById('IAB_clicktag').setAttribute('href',getUriParams.clicktag);
+</script>
 </body>
 </html>
