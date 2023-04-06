@@ -1,0 +1,16 @@
+{
+    "version": "1.0",
+    "title": "BYD Atto 3 medium rectangle",
+    "description": "",
+    "width": 300,
+    "height": 250,
+    "events": {
+        "enabled": 0,
+        "list": {
+        }
+    },
+    "clicktags": {
+        "clickTAG": "www.bydauto.at"
+    },
+    "source": "index.html"
+}
