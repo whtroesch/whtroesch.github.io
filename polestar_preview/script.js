@@ -44,8 +44,8 @@ function arrayTrim(array) {
 }
 
 function cropTitle(title) {
-    if (title.length > 39) {
-        title = title.substr(0, 38).trim() + "&hellip;";
+    if (title.length > 49) {
+        title = title.substr(0, 48).trim() + "&hellip;";
     }
 
     return title;
