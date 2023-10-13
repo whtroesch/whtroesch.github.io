@@ -89,7 +89,7 @@ if (reversed == null) { reversed = false; }
 	this.instance = new lib.bg();
 	this.instance.setTransform(1,1);
 
-	this.timeline.addTween(cjs.Tween.get(this.instance).to({_off:true},275).wait(48));
+	this.timeline.addTween(cjs.Tween.get(this.instance).wait(323));
 
 	// slides
 	this.instance_1 = new lib.slide0();
