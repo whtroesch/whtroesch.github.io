@@ -67,12 +67,6 @@ p.nominalBounds = new cjs.Rectangle(0,0,563,250);
 p.nominalBounds = new cjs.Rectangle(0,0,563,250);
 
 
-(lib.slide6 = function() {
-	this.initialize(img.slide6);
-}).prototype = p = new cjs.Bitmap();
-p.nominalBounds = new cjs.Rectangle(0,0,563,250);
-
-
 // stage content:
 (lib.index = function(mode,startPosition,loop,reversed) {
 if (loop == null) { loop = true; }
@@ -89,7 +83,7 @@ if (reversed == null) { reversed = false; }
 	this.instance = new lib.bg();
 	this.instance.setTransform(1,1);
 
-	this.timeline.addTween(cjs.Tween.get(this.instance).wait(323));
+	this.timeline.addTween(cjs.Tween.get(this.instance).wait(280));
 
 	// slides
 	this.instance_1 = new lib.slide0();
@@ -109,10 +103,7 @@ if (reversed == null) { reversed = false; }
 	this.instance_6 = new lib.slide5();
 	this.instance_6.setTransform(1,1);
 
-	this.instance_7 = new lib.slide6();
-	this.instance_7.setTransform(1,1);
-
-	this.timeline.addTween(cjs.Tween.get({}).to({state:[{t:this.instance_1}]}).to({state:[{t:this.instance_2}]},48).to({state:[{t:this.instance_3}]},48).to({state:[{t:this.instance_4}]},44).to({state:[{t:this.instance_5}]},48).to({state:[{t:this.instance_6}]},44).to({state:[{t:this.instance_7}]},46).wait(45));
+	this.timeline.addTween(cjs.Tween.get({}).to({state:[{t:this.instance_1}]}).to({state:[{t:this.instance_2}]},48).to({state:[{t:this.instance_3}]},48).to({state:[{t:this.instance_4}]},44).to({state:[{t:this.instance_5}]},48).to({state:[{t:this.instance_6}]},44).wait(48));
 
 	this._renderFirstFrame();
 
@@ -133,8 +124,7 @@ lib.properties = {
 		{src:"images/slide2.jpg", id:"slide2"},
 		{src:"images/slide3.jpg", id:"slide3"},
 		{src:"images/slide4.jpg", id:"slide4"},
-		{src:"images/slide5.jpg", id:"slide5"},
-		{src:"images/slide6.jpg", id:"slide6"}
+		{src:"images/slide5.jpg", id:"slide5"}
 	],
 	preloads: []
 };
