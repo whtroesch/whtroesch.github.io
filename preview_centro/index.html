@@ -28,14 +28,14 @@
 		}
 		return query_string;
 	}();
-</script>	
+</script>
 <script>
 var canvas, stage, exportRoot, anim_container, dom_overlay_container, fnStartAnimation;
 function init() {
 	canvas = document.getElementById("canvas");
 	anim_container = document.getElementById("animation_container");
 	dom_overlay_container = document.getElementById("dom_overlay_container");
-	var comp=AdobeAn.getComposition("96D4884DB319294C8A07F97A96340610");
+	var comp=AdobeAn.getComposition("1848DA499F35954DAF4C6FBF47583D68");
 	var lib=comp.getLibrary();
 	var loader = new createjs.LoadQueue(false);
 	loader.addEventListener("fileload", function(evt){handleFileLoad(evt,comp)});
@@ -74,14 +74,14 @@ function handleComplete(evt,comp) {
 </head>
 <body onload="init();" style="margin:0px;">
 	<a href="#clicktag" id="IAB_clicktag" target="_blank">
-		<div id="animation_container" style="background-color:rgba(255, 255, 255, 1.00); width:500px; height:1000px">
-			<canvas id="canvas" width="500" height="1000" style="position: absolute; display: block; background-color:rgba(255, 255, 255, 1.00);"></canvas>
-			<div id="dom_overlay_container" style="pointer-events:none; overflow:hidden; width:500px; height:1000px; position: absolute; left: 0px; top: 0px; display: block;">
-			</div>
+	<div id="animation_container" style="background-color:rgba(255, 255, 255, 1.00); width:500px; height:1000px">
+		<canvas id="canvas" width="500" height="1000" style="position: absolute; display: block; background-color:rgba(255, 255, 255, 1.00);"></canvas>
+		<div id="dom_overlay_container" style="pointer-events:none; overflow:hidden; width:500px; height:1000px; position: absolute; left: 0px; top: 0px; display: block;">
 		</div>
-	</a>
-	<script>
-		document.getElementById('IAB_clicktag').setAttribute('href',getUriParams.clicktag);
-	</script>
+	</div>
+</a>
+<script>
+	document.getElementById('IAB_clicktag').setAttribute('href',getUriParams.clicktag);
+</script>
 </body>
 </html>
